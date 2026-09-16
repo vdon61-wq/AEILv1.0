@@ -1,0 +1,21 @@
+AEIL v1.0 — AI Emotional Intelligence Layer
+
+This repository contains the AEIL v1.0 public specification, benchmark materials,
+documentation, and implementation-related materials.
+
+Specification and documentation:
+CC BY 4.0 — see LICENSE-SPECIFICATION.md
+
+Benchmark:
+CC BY 4.0 — see LICENSE-BENCHMARK.md
+
+Code and machine-readable implementation materials:
+Apache License 2.0 — see LICENSE-CODE.md
+
+AEIL names, logos, and certification terminology are governed separately by
+TRADEMARK.md and CERTIFICATION.md.
+
+Recommended attribution:
+“Based on AEIL v1.0 — AI Emotional Intelligence Layer.”
+
+Official project URL: [insert official AEIL project URL]

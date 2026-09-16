@@ -1,0 +1,10 @@
+Apache License
+Version 2.0, January 2004
+
+The canonical Apache License, Version 2.0 is available at:
+https://www.apache.org/licenses/LICENSE-2.0
+
+SPDX-License-Identifier: Apache-2.0
+
+This repository applies Apache-2.0 to code and other materials explicitly designated
+as code under LICENSE-CODE.md.

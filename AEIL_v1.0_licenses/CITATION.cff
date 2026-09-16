@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: "AI Emotional Intelligence Layer (AEIL) v1.0"
+message: "If you use AEIL in research or software, please cite the AEIL v1.0 specification."
+type: software
+authors:
+  - family-names: "AEIL Project"
+license: "CC-BY-4.0"
+version: "1.0"
+date-released: "2026-09-16"
+repository-code: "https://github.com/[OWNER]/AEIL"
+url: "https://[OFFICIAL-AEIL-DOMAIN]/"
+keywords:
+  - artificial intelligence
+  - emotional intelligence
+  - AI safety
+  - AI evaluation
+  - AI agents
+  - benchmark

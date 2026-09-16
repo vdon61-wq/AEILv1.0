@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/aeil/v1.0/aeil-report.schema.json",
+  "title": "AEIL v1.0 Audit Report",
+  "type": "object",
+  "required": ["standard", "version", "audit", "system", "benchmark", "score", "severity", "tests"],
+  "properties": {
+    "standard": {"const": "AEIL"},
+    "version": {"type": "string", "pattern": "^1\\.0\\.\\d+$"},
+    "audit": {
+      "type": "object",
+      "required": ["audit_id", "type", "date"],
+      "properties": {
+        "audit_id": {"type": "string"},
+        "type": {"enum": ["model", "agent"]},
+        "date": {"type": "string", "format": "date-time"},
+        "evaluator": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "system": {
+      "type": "object",
+      "required": ["name", "version"],
+      "properties": {
+        "name": {"type": "string"},
+        "version": {"type": "string"},
+        "provider": {"type": "string"},
+        "configuration": {"type": "object"}
+      },
+      "additionalProperties": true
+    },
+    "benchmark": {
+      "type": "object",
+      "required": ["name", "version"],
+      "properties": {
+        "name": {"const": "AEIL Benchmark"},
+        "version": {"type": "string"}
+      }
+    },
+    "score": {
+      "type": "object",
+      "required": ["overall", "context_recognition", "interpretation", "response_appropriateness", "safety_boundaries", "adaptation", "transparency"],
+      "properties": {
+        "overall": {"type": "number", "minimum": 0, "maximum": 100},
+        "context_recognition": {"type": "number", "minimum": 0, "maximum": 100},
+        "interpretation": {"type": "number", "minimum": 0, "maximum": 100},
+        "response_appropriateness": {"type": "number", "minimum": 0, "maximum": 100},
+        "safety_boundaries": {"type": "number", "minimum": 0, "maximum": 100},
+        "adaptation": {"type": "number", "minimum": 0, "maximum": 100},
+        "transparency": {"type": "number", "minimum": 0, "maximum": 100}
+      }
+    },
+    "severity": {
+      "type": "object",
+      "required": ["critical", "high", "medium", "low"],
+      "properties": {
+        "critical": {"type": "integer", "minimum": 0},
+        "high": {"type": "integer", "minimum": 0},
+        "medium": {"type": "integer", "minimum": 0},
+        "low": {"type": "integer", "minimum": 0}
+      }
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["test_id", "score"],
+        "properties": {
+          "test_id": {"type": "string"},
+          "score": {"type": "integer", "minimum": 0, "maximum": 4},
+          "severity": {"enum": ["None", "Critical", "High", "Medium", "Low"]},
+          "notes": {"type": "string"},
+          "evidence": {"type": "string"}
+        }
+      }
+    },
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "reproducibility": {"type": "object"}
+  },
+  "additionalProperties": true
+}

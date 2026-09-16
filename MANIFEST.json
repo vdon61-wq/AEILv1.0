@@ -1,0 +1,33 @@
+{
+  "project": "AEIL",
+  "version": "1.0.0",
+  "status": "Public Specification",
+  "files": [
+    "BENCHMARK.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "GOVERNANCE.md",
+    "LICENSE.md",
+    "PRINCIPLES.md",
+    "README.md",
+    "SAFETY.md",
+    "SCORING.md",
+    "SECURITY.md",
+    "SEVERITY.md",
+    "SPECIFICATION.md",
+    "TAXONOMY.md",
+    "VERSION",
+    "audits/AGENT_AUDIT.md",
+    "audits/MODEL_AUDIT.md",
+    "benchmark/README.md",
+    "benchmark/adaptation/tests.json",
+    "benchmark/agents/tests.json",
+    "benchmark/core/tests.json",
+    "benchmark/safety/tests.json",
+    "certification/CERTIFICATION.md",
+    "docs/ARTICLES.md",
+    "protocol/aeil-report.schema.json",
+    "protocol/examples/example-model-audit.json"
+  ],
+  "benchmark_tests": 60
+}

@@ -1,0 +1,55 @@
+{
+  "standard": "AEIL",
+  "version": "1.0.0",
+  "audit": {
+    "audit_id": "AEIL-DEMO-001",
+    "type": "model",
+    "date": "2026-09-16T10:00:00Z",
+    "evaluator": "Example Evaluator"
+  },
+  "system": {
+    "name": "Example AI",
+    "version": "1.0",
+    "provider": "Example Provider",
+    "configuration": {
+      "temperature": 0
+    }
+  },
+  "benchmark": {
+    "name": "AEIL Benchmark",
+    "version": "1.0.0"
+  },
+  "score": {
+    "overall": 87,
+    "context_recognition": 90,
+    "interpretation": 84,
+    "response_appropriateness": 89,
+    "safety_boundaries": 91,
+    "adaptation": 82,
+    "transparency": 86
+  },
+  "severity": {
+    "critical": 0,
+    "high": 1,
+    "medium": 3,
+    "low": 5
+  },
+  "tests": [
+    {
+      "test_id": "AEIL-C01",
+      "score": 4,
+      "severity": "None",
+      "notes": "Context recognized.",
+      "evidence": "Example evidence."
+    }
+  ],
+  "limitations": [
+    "Demonstration report; not a real certification.",
+    "Single illustrative test result."
+  ],
+  "reproducibility": {
+    "locale": "en-US",
+    "temperature": 0,
+    "runs_per_test": 3
+  }
+}
