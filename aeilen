@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AEIL — AI Emotional Intelligence Layer · Emotional Intelligence Platform for AI Systems</title>
+<meta name="description" content="AEIL demo platform: a single emotional intelligence methodology powering seven applied AI products — Team Manager, HR Assistant, Customer Success, Sales, Support, Negotiation and Education.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="AEIL Demo Platform">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#070b13">
+
+<!-- ═══════════════════════════════════════════════════════════════
+     © 2025 AEIL Demo Platform · AI Emotional Intelligence Layer
+     All rights reserved. Exclusive rights to the code, design,
+     methodology, texts and graphics belong to the rights holder.
+     Any copying, reproduction, distribution or use of derivative
+     works without written permission of the rights holder is
+     prohibited. Unauthorized use will be prosecuted by law.
+     Contact / Licensing: via the in-app Feedback form.
+════════════════════════════════════════════════════════════════ -->
+<meta name="copyright" content="© 2025 AEIL Demo Platform. All rights reserved. Exclusive rights belong to the rights holder.">
+<meta name="publisher" content="AEIL Demo Platform">
+<meta name="DC.title" content="AEIL — AI Emotional Intelligence Layer">
+<meta name="DC.creator" content="AEIL Demo Platform">
+<meta name="DC.rights" content="© 2025 AEIL Demo Platform — All Rights Reserved">
+<meta name="DC.rights.copyright" content="All materials are protected. Use without written permission is prohibited.">
+<link rel="license" href="https://aeil-demo.example.com/legal/license" title="License: All Rights Reserved — Terms of Use">
+<!-- Replace the domain with the production one before publishing -->
+<link rel="canonical" href="https://aeil-demo.example.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AEIL">
+<meta property="og:title" content="AI Emotional Intelligence Layer — AEIL Demo Platform">
+<meta property="og:description" content="One emotional intelligence methodology — seven applied AI products: from team analytics to negotiation and education.">
+<meta property="og:url" content="https://aeil-demo.example.com/">
+<meta property="og:image" content="https://image.qwenlm.ai/public_source/8a06ed09-2cd0-4e64-a7d8-ce4ea64e4431/1e57a4262-29fb-4b2e-bff3-28a2a7a8c883.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Emotional Intelligence Layer — AEIL Demo Platform">
+<meta name="twitter:description" content="One emotional intelligence methodology — seven applied AI products.">
+<meta name="twitter:image" content="https://image.qwenlm.ai/public_source/8a06ed09-2cd0-4e64-a7d8-ce4ea64e4431/1e57a4262-29fb-4b2e-bff3-28a2a7a8c883.png">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%237c5cff'/><path d='M10 20c2-6 10-6 12-8' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round'/></svg>">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5.0.17/400.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5.0.17/600.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5.0.17/700.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5.0.17/800.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5.0.18/400.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5.0.18/600.css" rel="stylesheet">
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@graph":[
+  {"@type":"WebSite","@id":"https://aeil-demo.example.com/#website","url":"https://aeil-demo.example.com/","name":"AEIL — AI Emotional Intelligence Layer","inLanguage":"en",
+   "description":"Emotional intelligence demo platform for AI systems.",
+   "license":"https://aeil-demo.example.com/legal/license",
+   "copyrightYear":"2025",
+   "copyrightNotice":"© 2025 AEIL Demo Platform. All rights reserved.",
+   "copyrightHolder":{"@type":"Organization","name":"AEIL Demo Platform"}},
+  {"@type":"Organization","name":"AEIL Demo Platform","url":"https://aeil-demo.example.com/","slogan":"One methodology — seven AI applications"},
+  {"@type":"SoftwareApplication","name":"AEIL Multi-Product Demonstrator","applicationCategory":"BusinessApplication","operatingSystem":"Web","browserRequirements":"JavaScript",
+   "isAccessibleForFree":true,
+   "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+   "datePublished":"2025-01-15","dateModified":"2025-06-01",
+   "license":"https://aeil-demo.example.com/legal/license",
+   "copyrightYear":"2025",
+   "copyrightNotice":"© 2025 AEIL Demo Platform. All rights reserved. Unauthorized copying is prohibited.",
+   "copyrightHolder":{"@type":"Organization","name":"AEIL Demo Platform"},
+   "author":{"@type":"Organization","name":"AEIL Demo Platform"},
+   "description":"Proof-of-concept of the AEIL methodology: a single emotional intelligence core powering seven applied AI products.",
+   "featureList":["AEIL Core Engine","AI Team Manager","AI HR Assistant","AI Customer Success Manager","AI Sales Manager","AI Support Manager","AI Negotiation Assistant","AI Education Manager","AEIL Simulator","Safety Center","Feedback via Telegram"]},
+  {"@type":"ItemList","name":"AEIL Applied Products","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"AI Team Manager","description":"Understanding team state."},
+    {"@type":"ListItem","position":2,"name":"AI HR Assistant","description":"Emotionally aware interaction with employees."},
+    {"@type":"ListItem","position":3,"name":"AI Customer Success Manager","description":"Early detection of customer churn risk."},
+    {"@type":"ListItem","position":4,"name":"AI Sales Manager","description":"Understanding negotiation dynamics and client intent."},
+    {"@type":"ListItem","position":5,"name":"AI Support Manager","description":"Preventing emotional escalation of support tickets."},
+    {"@type":"ListItem","position":6,"name":"AI Negotiation Assistant","description":"Analysis of positions, interests and conflicts."},
+    {"@type":"ListItem","position":7,"name":"AI Education Manager","description":"Analysis of learner engagement and behavior changes."}]},
+  {"@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is AEIL?","acceptedAnswer":{"@type":"Answer","text":"AEIL (AI Emotional Intelligence Layer) is a methodology that adds an emotional and behavioral context layer to AI systems: emotions, motivation, relationships, conflict, risk and uncertainty are considered when choosing an action."}},
+    {"@type":"Question","name":"Does AEIL read people's minds?","acceptedAnswer":{"@type":"Answer","text":"No. The system forms probabilistic hypotheses based on observed signals and interaction history. It does not make diagnoses or employment decisions — critical choices remain with a human."}},
+    {"@type":"Question","name":"Is an API key required for the demo?","acceptedAnswer":{"@type":"Answer","text":"No. Demo mode runs on built-in fictional datasets and a mock model; if an external LLM is unavailable, the service automatically switches to DEMO SIMULATION."}},
+    {"@type":"Question","name":"How can I contact the developers?","acceptedAnswer":{"@type":"Answer","text":"Use the Feedback button in the app header, on the overview page or in the footer. Your message (name, contact, subject and text) is prepared and delivered via Telegram."}},
+    {"@type":"Question","name":"Can the site materials be used freely?","acceptedAnswer":{"@type":"Answer","text":"No. The code, design, methodology and texts are protected by copyright (© 2025 AEIL Demo Platform). Use is allowed only under a written license from the rights holder."}}]}
+ ]
+}
+</script>
+
+<script>
+/* ═ Legal protection: declaration of rights and deterrence of
+   unauthorized copying. Does not affect indexing or form inputs. ═ */
+(function(){
+ var NOTICE='\n\n© 2025 AEIL Demo Platform · aeil-demo.example.com\nMaterials are protected by copyright. Use requires permission of the rights holder.';
+ document.addEventListener('contextmenu',function(e){
+   if(e.target.closest('textarea,input,select'))return; /* forms stay accessible */
+   e.preventDefault();
+ });
+ document.addEventListener('copy',function(e){
+   var sel=window.getSelection();
+   if(sel&&sel.toString().trim().length>40){
+     e.preventDefault();
+     e.clipboardData.setData('text/plain',sel.toString()+NOTICE);
+   }
+ });
+ document.addEventListener('dragstart',function(e){
+   if(!e.target.closest('textarea,input,select'))e.preventDefault();
+ });
+ document.addEventListener('keydown',function(e){
+   if(e.target.closest('textarea,input,select'))return;
+   if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s')e.preventDefault();
+ });
+})();
+</script>
+
+<style>
+:root{
+  --bg:#070b13;--bg2:#0a1020;--panel:#0e1524;--panel2:#121b2e;--panel3:#16213a;
+  --line:rgba(148,163,184,.14);--line2:rgba(148,163,184,.28);
+  --txt:#e9eef7;--mut:#8b98b0;--dim:#5c6a84;
+  --acc:#7c5cff;--acc2:#22d3ee;--ok:#34d399;--warn:#fbbf24;--bad:#fb7185;--info:#60a5fa;--pink:#f472b6;
+  --grad:linear-gradient(135deg,#7c5cff 0%,#22d3ee 100%);
+  --r:14px;--sidebar-w:248px;font-size:15px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(900px 500px at 85% -10%,rgba(124,92,255,.14),transparent 60%),radial-gradient(700px 400px at -10% 30%,rgba(34,211,238,.08),transparent 55%),var(--bg);color:var(--txt);font-family:'Manrope',system-ui,sans-serif;min-height:100vh;overscroll-behavior-y:none}
+body.no-anim *{transition:none!important;animation:none!important}
+.mono{font-family:'JetBrains Mono',monospace}
+::-webkit-scrollbar{width:9px;height:9px}::-webkit-scrollbar-thumb{background:#22304d;border-radius:9px}::-webkit-scrollbar-track{background:transparent}
+
+/* layout — FIXED in v1.2: #mainwrap selector (element is a div, not main) */
+#app{display:flex;min-height:100vh}
+aside#sidebar{width:var(--sidebar-w);flex-shrink:0;position:fixed;top:0;left:0;bottom:0;z-index:60;background:rgba(8,13,24,.94);backdrop-filter:blur(14px);border-right:1px solid var(--line);display:flex;flex-direction:column;transition:transform .25s ease;overflow-y:auto;overflow-x:hidden}
+.logo{display:flex;gap:11px;align-items:center;padding:20px 18px 16px;cursor:pointer}
+.logo-mark{width:38px;height:38px;border-radius:11px;background:var(--grad);display:grid;place-items:center;font-weight:800;color:#fff;font-size:14px;box-shadow:0 4px 18px rgba(124,92,255,.45);flex-shrink:0}
+.logo b{font-size:15px;letter-spacing:.4px;display:block;line-height:1.15}
+.logo span{font-size:10.5px;color:var(--mut);letter-spacing:1.6px;text-transform:uppercase}
+.nav-group{padding:6px 12px}
+.nav-label{font-size:10px;letter-spacing:2px;color:var(--dim);text-transform:uppercase;padding:12px 10px 6px;font-weight:600}
+.nav-item{display:flex;align-items:center;gap:10px;padding:8.5px 10px;border-radius:10px;color:var(--mut);font-size:13.5px;font-weight:600;cursor:pointer;transition:.15s;border:1px solid transparent;user-select:none}
+.nav-item:hover{background:rgba(124,92,255,.09);color:var(--txt)}
+.nav-item.active{background:linear-gradient(135deg,rgba(124,92,255,.22),rgba(34,211,238,.1));color:#fff;border-color:rgba(124,92,255,.35)}
+.nav-item .dot{width:8px;height:8px;border-radius:3px;flex-shrink:0}
+.nav-item svg{width:17px;height:17px;flex-shrink:0}
+.side-foot{margin-top:auto;padding:14px;border-top:1px solid var(--line);font-size:11px;color:var(--dim);line-height:1.5}
+.side-foot .fb-link{color:var(--acc2);cursor:pointer;font-weight:600;text-decoration:underline dotted;text-underline-offset:3px}
+.side-foot .fb-link:hover{color:#fff}
+#mainwrap{flex:1;margin-left:var(--sidebar-w);display:flex;flex-direction:column;min-width:0;width:calc(100% - var(--sidebar-w))}
+header#topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:8px;flex-wrap:wrap;row-gap:8px;padding:10px 22px;background:rgba(7,11,19,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+#burger{display:none;background:none;border:1px solid var(--line);color:var(--txt);border-radius:9px;width:36px;height:36px;font-size:17px;cursor:pointer}
+#viewTitle{font-size:14px;font-weight:700;letter-spacing:.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+#viewTitle small{color:var(--dim);font-weight:500;margin-right:8px}
+.tspacer{flex:1}
+.tbtn{display:inline-flex;align-items:center;gap:7px;background:var(--panel);border:1px solid var(--line);color:var(--mut);padding:7px 12px;border-radius:10px;font-size:12.5px;font-weight:600;cursor:pointer;transition:.15s;font-family:inherit;white-space:nowrap}
+.tbtn:hover{color:var(--txt);border-color:var(--line2);transform:translateY(-1px)}
+.tbtn.accent{background:var(--grad);border:none;color:#fff}
+.tbtn.live-on{background:rgba(52,211,153,.15);border-color:rgba(52,211,153,.4);color:var(--ok)}
+.pill-provider{display:inline-flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:1px;padding:7px 11px;border-radius:999px;border:1px solid rgba(251,191,36,.35);color:var(--warn);background:rgba(251,191,36,.08);cursor:pointer;font-weight:600}
+.pill-provider .pdot{width:7px;height:7px;border-radius:50%;background:currentColor;animation:pulse 1.6s infinite}
+.pill-provider.live{border-color:rgba(52,211,153,.4);color:var(--ok);background:rgba(52,211,153,.08)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+main#content{padding:26px 26px 40px;max-width:1460px;width:100%;margin:0 auto}
+footer#foot{border-top:1px solid var(--line);padding:20px 26px 30px;color:var(--dim);font-size:12px;line-height:1.6;max-width:1460px;margin:0 auto;width:100%}
+footer#foot .foot-row{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.view{display:none;animation:fadeUp .35s ease}
+.view.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* generic */
+.card{background:linear-gradient(180deg,var(--panel),rgba(14,21,36,.7));border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.card h3{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--mut);font-weight:700;margin-bottom:14px}
+.card h3 .en{color:var(--acc2)}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g6{grid-template-columns:repeat(6,1fr)}
+.core-layout{grid-template-columns:340px 1fr}
+.team-climate-grid{grid-template-columns:1.4fr 1fr}
+.cs-layout,.edu-layout{grid-template-columns:250px 1fr}
+.hr-layout{grid-template-columns:1fr 1.35fr}
+.support-layout{grid-template-columns:1fr 1.3fr}
+.cs-health{grid-template-columns:repeat(5,1fr)}
+.sim-days{grid-template-columns:repeat(8,1fr)}
+.page-head{margin-bottom:22px}
+.page-head h1{font-size:26px;font-weight:800;letter-spacing:-.3px}
+.page-head p{color:var(--mut);margin-top:6px;font-size:14px;max-width:820px;line-height:1.55}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;font-size:11.5px;font-weight:700;border:1px solid var(--line);color:var(--mut);cursor:pointer;transition:.15s;background:var(--panel);font-family:inherit}
+.chip:hover{color:var(--txt);border-color:var(--line2)}
+.chip.on{background:linear-gradient(135deg,rgba(124,92,255,.25),rgba(34,211,238,.12));border-color:rgba(124,92,255,.5);color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;border:none;padding:11px 20px;border-radius:11px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;transition:.18s;box-shadow:0 6px 22px rgba(124,92,255,.3)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(124,92,255,.42)}
+.btn:disabled{opacity:.55;cursor:wait;transform:none}
+.btn.ghost{background:var(--panel);border:1px solid var(--line2);color:var(--txt);box-shadow:none}
+.btn.ghost:hover{border-color:var(--acc)}
+.btn.small{padding:8px 14px;font-size:12px;border-radius:9px}
+.btn.warn{background:linear-gradient(135deg,#fb7185,#fbbf24)}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:1.4px;font-weight:600;padding:3px 8px;border-radius:6px;text-transform:uppercase;vertical-align:middle}
+.tag.fact{background:rgba(96,165,250,.14);color:var(--info);border:1px solid rgba(96,165,250,.35)}
+.tag.interp{background:rgba(251,191,36,.12);color:var(--warn);border:1px solid rgba(251,191,36,.35)}
+.tag.hyp{background:rgba(167,139,250,.14);color:#b7a3ff;border:1px solid rgba(167,139,250,.4)}
+.tag.action{background:rgba(52,211,153,.13);color:var(--ok);border:1px solid rgba(52,211,153,.35)}
+.tag.safe{background:rgba(34,211,238,.1);color:var(--acc2);border:1px solid rgba(34,211,238,.35)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--mut);align-items:center}
+.legend i{font-style:normal;display:inline-flex;gap:6px;align-items:center}
+.bar-row{display:flex;align-items:center;gap:10px;margin:7px 0;font-size:13px}
+.bar-row .bl{width:190px;color:var(--mut);font-weight:600;flex-shrink:0}
+.bar-track{flex:1;height:8px;border-radius:99px;background:rgba(148,163,184,.13);overflow:hidden}
+.bar-fill{height:100%;border-radius:99px;transition:width 1s cubic-bezier(.2,.7,.3,1)}
+.bar-val{width:52px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:12px;flex-shrink:0}
+.metric-card{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:15px 16px;position:relative;overflow:hidden}
+.metric-card .mc-label{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--mut);font-weight:700}
+.metric-card .mc-val{font-size:27px;font-weight:800;font-family:'JetBrains Mono',monospace;margin-top:7px}
+.metric-card .mc-trend{font-size:14px;margin-left:5px}
+.metric-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--mc,var(--acc));opacity:.8}
+.up{color:var(--bad)}.down{color:var(--ok)}.flat{color:var(--mut)}
+textarea,input[type=text],select{width:100%;background:var(--bg2);border:1px solid var(--line2);color:var(--txt);border-radius:11px;padding:12px 14px;font-family:inherit;font-size:13.5px;resize:vertical;outline:none;transition:.15s;line-height:1.5}
+textarea:focus,input[type=text]:focus,select:focus{border-color:var(--acc);box-shadow:0 0 0 3px rgba(124,92,255,.18)}
+select{appearance:none;cursor:pointer}
+.field-lbl{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--mut);font-weight:700;margin-bottom:8px;display:block}
+.note{font-size:12px;color:var(--dim);line-height:1.5}
+.divider{height:1px;background:var(--line);margin:16px 0}
+.arrow-down{text-align:center;color:var(--acc);font-size:17px;line-height:1;padding:4px 0}
+kbd{background:var(--panel3);border:1px solid var(--line2);border-bottom-width:2px;border-radius:6px;padding:2px 7px;font-family:'JetBrains Mono',monospace;font-size:11px}
+.seg{display:inline-flex;background:var(--bg2);border:1px solid var(--line);border-radius:11px;padding:3px;gap:3px;flex-wrap:wrap}
+.seg button{background:transparent;border:none;color:var(--mut);padding:7px 14px;border-radius:8px;font-size:12.5px;font-weight:700;cursor:pointer;font-family:inherit;transition:.15s}
+.seg button.on{background:var(--grad);color:#fff}
+.privacy-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(34,211,238,.09);border:1px solid rgba(34,211,238,.4);color:var(--acc2);padding:7px 14px;border-radius:999px;font-size:12px;font-weight:700}
+.spark{width:100%;height:5px;border-radius:99px;background:rgba(148,163,184,.12);overflow:hidden;margin-top:9px}
+.spark i{display:block;height:100%;border-radius:99px}
+
+/* feedback form */
+.fb-step{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;color:var(--mut);line-height:1.5;padding:6px 0}
+.fb-step b{color:var(--txt)}
+.fb-step .n{width:22px;height:22px;border-radius:7px;background:var(--panel3);border:1px solid var(--line2);display:grid;place-items:center;font-size:11px;flex-shrink:0;font-family:'JetBrains Mono',monospace;color:var(--acc2)}
+input.fb-err,textarea.fb-err{border-color:var(--bad)!important;box-shadow:0 0 0 3px rgba(251,113,133,.15)!important}
+
+/* overview */
+.hero{padding:34px 0 10px}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(124,92,255,.4);background:rgba(124,92,255,.1);padding:7px 15px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.6px;color:#c9bcff}
+.hero h1{font-size:clamp(30px,4.6vw,54px);font-weight:800;letter-spacing:-1.2px;margin:20px 0 14px;line-height:1.06}
+.hero h1 .gr{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{color:var(--mut);font-size:clamp(14px,1.6vw,17.5px);max-width:760px;line-height:1.6}
+.hero-cta{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:30px;margin-top:28px;flex-wrap:wrap}
+.hero-stats div b{font-size:21px;font-family:'JetBrains Mono',monospace;display:block}
+.hero-stats div span{font-size:11.5px;color:var(--dim);letter-spacing:1px;text-transform:uppercase}
+.pcard{background:linear-gradient(180deg,var(--panel),rgba(14,21,36,.6));border:1px solid var(--line);border-radius:16px;padding:21px;position:relative;overflow:hidden;transition:.2s;cursor:pointer;display:flex;flex-direction:column;gap:10px}
+.pcard:hover{transform:translateY(-4px);border-color:rgba(124,92,255,.45);box-shadow:0 14px 36px rgba(0,0,0,.4)}
+.pcard::before{content:'';position:absolute;inset:0 0 auto 0;height:3px;background:var(--pc,var(--acc))}
+.pcard .picon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--pc) 16%,transparent);color:var(--pc);border:1px solid color-mix(in srgb,var(--pc) 32%,transparent)}
+.pcard .picon svg{width:21px;height:21px}
+.pcard h4{font-size:15.5px;font-weight:800}
+.pcard p{font-size:12.8px;color:var(--mut);line-height:1.5;flex:1}
+.pcard .ppipe{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--dim);letter-spacing:.3px;line-height:1.6}
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+.split-card{display:grid;grid-template-columns:1fr 56px 1fr;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.split-card>div{padding:24px}
+.split-card .wo{background:rgba(251,113,133,.05)}
+.split-card .wi{background:rgba(52,211,153,.05)}
+.split-card .vs{display:grid;place-items:center;background:var(--panel);font-weight:800;color:var(--dim);font-size:12px;letter-spacing:1px}
+
+/* pipeline */
+.pipe-stage{display:flex;align-items:center;gap:11px;padding:8px 13px;border-radius:10px;border:1px solid transparent;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1px;color:var(--dim);transition:.25s;position:relative}
+.pipe-stage .pn{width:22px;height:22px;border-radius:7px;display:grid;place-items:center;background:var(--panel3);font-size:10px;flex-shrink:0;border:1px solid var(--line)}
+.pipe-stage.done{color:var(--txt);border-color:var(--line)}
+.pipe-stage.done .pn{background:rgba(124,92,255,.2);border-color:rgba(124,92,255,.5);color:#c9bcff}
+.pipe-stage.now{background:linear-gradient(135deg,rgba(124,92,255,.22),rgba(34,211,238,.12));border-color:rgba(124,92,255,.55);color:#fff;transform:scale(1.02)}
+.pipe-stage.now .pn{background:var(--grad);border:none;color:#fff}
+.pipe-stage .connector{position:absolute;left:23px;top:36px;width:2px;height:12px;background:var(--line2)}
+.pipe-chain{display:flex;flex-direction:column;gap:9px}
+.flow-chips{display:flex;flex-wrap:wrap;align-items:center;gap:7px}
+.flow-chips .fc{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.8px;padding:7px 12px;border-radius:9px;background:var(--panel3);border:1px solid var(--line);color:var(--mut)}
+.flow-chips .fa{color:var(--acc);font-size:13px}
+
+/* result blocks */
+.res-block{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--rb,var(--acc));border-radius:11px;padding:14px 16px;margin-bottom:11px;animation:fadeUp .4s ease}
+.res-block h5{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--mut);display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px;font-weight:700}
+.res-block p{font-size:13.5px;line-height:1.55}
+.sig-grid{display:flex;flex-wrap:wrap;gap:8px}
+.sig{display:inline-flex;align-items:center;gap:8px;background:var(--bg2);border:1px solid var(--line);border-radius:9px;padding:7px 11px;font-size:12.5px;font-weight:600}
+.sig b{font-family:'JetBrains Mono',monospace;color:var(--acc2)}
+.conf-pill{display:inline-flex;align-items:center;gap:8px;background:var(--panel3);border:1px solid var(--line2);border-radius:999px;padding:6px 13px;font-family:'JetBrains Mono',monospace;font-size:12px;cursor:pointer;transition:.15s;font-weight:600}
+.conf-pill:hover{border-color:var(--acc)}
+.link-btn{background:none;border:none;color:var(--acc2);font-family:inherit;font-size:12px;font-weight:700;cursor:pointer;text-decoration:underline dotted;text-underline-offset:3px;padding:0}
+.link-btn:hover{color:#fff}
+
+/* team */
+.member-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:17px;cursor:pointer;transition:.18s}
+.member-card:hover{transform:translateY(-3px);border-color:var(--line2);box-shadow:0 10px 26px rgba(0,0,0,.35)}
+.avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:15px;color:#fff;flex-shrink:0}
+.m-row{display:flex;justify-content:space-between;font-size:12.5px;padding:4.5px 0;border-bottom:1px dashed rgba(148,163,184,.1)}
+.m-row:last-child{border:none}
+.risk-low{color:var(--ok)}.risk-med{color:var(--warn)}.risk-high{color:var(--bad)}.risk-none{color:var(--mut)}
+.chain-step{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:11px 15px;font-size:13px;font-weight:600;opacity:0;transform:translateX(-14px);transition:.4s}
+.chain-step.show{opacity:1;transform:none}
+.chain-step .ci{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;flex-shrink:0;font-size:14px}
+
+/* timeline */
+.vtl{position:relative;padding-left:26px}
+.vtl::before{content:'';position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--acc),var(--acc2))}
+.vtl-item{position:relative;padding:0 0 16px 12px}
+.vtl-item::before{content:'';position:absolute;left:-23px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2.5px solid var(--vc,var(--acc))}
+.vtl-item .vt-day{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:1.4px;color:var(--dim);text-transform:uppercase}
+.vtl-item .vt-txt{font-size:13.5px;font-weight:600;margin-top:2px}
+.vtl-item .vt-sub{font-size:11.5px;color:var(--mut);margin-top:2px}
+
+/* conversation */
+.msg{display:flex;gap:10px;margin-bottom:12px}
+.msg .who{width:64px;flex-shrink:0;font-size:11px;font-weight:800;letter-spacing:1px;padding-top:8px;text-align:right}
+.msg .bubble{background:var(--panel2);border:1px solid var(--line);border-radius:4px 13px 13px 13px;padding:11px 15px;font-size:13.5px;line-height:1.55;flex:1}
+.msg.client .bubble{background:rgba(251,191,36,.06);border-color:rgba(251,191,36,.22)}
+.msg.ai .bubble{background:rgba(124,92,255,.08);border-color:rgba(124,92,255,.3)}
+
+/* negotiation */
+.negmap{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.neg-col{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:16px}
+.neg-col h4{font-size:13px;font-weight:800;margin-bottom:12px}
+.neg-row{display:flex;gap:10px;font-size:12.5px;padding:8px 0;border-bottom:1px dashed rgba(148,163,184,.1);align-items:flex-start}
+.neg-row:last-child{border:none}
+.neg-row .k{width:88px;flex-shrink:0;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--acc2);text-transform:uppercase;padding-top:2px}
+.neg-center{text-align:center;margin:16px 0}
+.zone-chip{display:inline-block;background:rgba(251,113,133,.1);border:1px solid rgba(251,113,133,.4);color:#ffb3c0;padding:10px 20px;border-radius:12px;font-weight:800;font-size:13px;letter-spacing:.6px}
+.zone-chip.ok{background:rgba(52,211,153,.09);border-color:rgba(52,211,153,.4);color:var(--ok)}
+.zone-chip.info{background:rgba(96,165,250,.09);border-color:rgba(96,165,250,.4);color:var(--info)}
+
+/* escalation */
+.lvl-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:.2s}
+.lvl-card.on{border-color:var(--lc);box-shadow:0 0 0 1px var(--lc),0 8px 26px rgba(0,0,0,.3)}
+.lvl-card .lv{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.6px;color:var(--lc);font-weight:700}
+.lvl-card h5{margin:5px 0 6px;font-size:13.5px}
+.lvl-card p{font-size:12px;color:var(--mut);line-height:1.5}
+
+/* simulator */
+.day-cell{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px;text-align:center;opacity:.28;transform:scale(.94);transition:.45s}
+.day-cell.on{opacity:1;transform:none;border-color:var(--dc,var(--acc))}
+.day-cell .d-day{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:1.8px;color:var(--dim)}
+.day-cell .d-ico{font-size:21px;margin:7px 0}
+.day-cell .d-txt{font-size:11.5px;font-weight:700;line-height:1.35}
+
+/* modal / toasts / live */
+#modal-overlay{position:fixed;inset:0;background:rgba(4,7,14,.75);backdrop-filter:blur(6px);z-index:100;display:none;align-items:flex-start;justify-content:center;padding:5vh 18px;overflow-y:auto}
+#modal-overlay.open{display:flex}
+#modal-box{background:var(--panel2);border:1px solid var(--line2);border-radius:18px;max-width:680px;width:100%;padding:26px;position:relative;animation:fadeUp .28s ease}
+#modal-close{position:absolute;top:13px;right:13px;background:var(--panel3);border:1px solid var(--line);color:var(--mut);width:32px;height:32px;border-radius:9px;cursor:pointer;font-size:15px}
+#modal-close:hover{color:#fff}
+#toasts{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:200;display:flex;flex-direction:column;gap:9px;align-items:center;pointer-events:none;width:max-content;max-width:94vw}
+.toast{background:var(--panel3);border:1px solid rgba(124,92,255,.45);color:var(--txt);padding:11px 20px;border-radius:12px;font-size:13px;font-weight:600;box-shadow:0 10px 34px rgba(0,0,0,.5);animation:fadeUp .3s ease;max-width:94vw;text-align:center}
+#live-feed{position:fixed;right:18px;bottom:18px;width:360px;max-width:calc(100vw - 30px);z-index:90;background:rgba(10,15,28,.96);border:1px solid rgba(52,211,153,.35);border-radius:16px;display:none;flex-direction:column;overflow:hidden;box-shadow:0 22px 60px rgba(0,0,0,.55)}
+#live-feed.open{display:flex}
+#live-feed .lf-head{display:flex;align-items:center;gap:9px;padding:12px 15px;border-bottom:1px solid var(--line);font-size:12.5px;font-weight:800}
+#live-feed .lf-head .rdot{width:9px;height:9px;border-radius:50%;background:var(--ok);animation:pulse 1.2s infinite}
+#live-feed .lf-body{max-height:340px;overflow-y:auto;padding:12px 14px;display:flex;flex-direction:column;gap:9px}
+.lf-ev{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--ec,var(--acc));border-radius:9px;padding:9px 12px;font-size:12px;line-height:1.45;animation:fadeUp .35s ease}
+.lf-ev .t{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--dim);letter-spacing:1px;display:block;margin-bottom:3px}
+
+/* presentation */
+#pres-overlay{position:fixed;inset:0;background:radial-gradient(1100px 700px at 70% 10%,rgba(124,92,255,.16),transparent 60%),#05080f;z-index:150;display:none;flex-direction:column;align-items:center;justify-content:center;padding:40px;text-align:center}
+#pres-overlay.open{display:flex}
+#pres-stage{font-size:11px;letter-spacing:3px;color:var(--acc2);font-family:'JetBrains Mono',monospace;margin-bottom:22px;text-transform:uppercase}
+#pres-content{max-width:920px;width:100%}
+#pres-content h2{font-size:clamp(24px,4.4vw,50px);font-weight:800;letter-spacing:-1px;line-height:1.12;margin-bottom:22px}
+#pres-content .big-sigs{display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+#pres-content .bsig{background:var(--panel2);border:1px solid var(--line2);border-radius:13px;padding:14px 20px;font-size:15px;font-weight:700}
+#pres-content .bsig b{font-family:'JetBrains Mono',monospace;display:block;font-size:21px;margin-top:5px}
+#pres-dots{display:flex;gap:9px;margin-top:36px;justify-content:center}
+#pres-dots i{width:9px;height:9px;border-radius:50%;background:var(--panel3);border:1px solid var(--line2);cursor:pointer;transition:.2s}
+#pres-dots i.on{background:var(--grad);border-color:transparent;transform:scale(1.25)}
+#pres-hint{position:absolute;bottom:22px;font-size:11.5px;color:var(--dim)}
+#pres-exit{position:absolute;top:20px;right:24px}
+#pres-nav{position:absolute;bottom:18px;right:24px;display:flex;gap:9px}
+
+/* misc */
+.code{background:#080d18;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.75;overflow-x:auto;color:#a8b6d2;white-space:pre}
+.code .k{color:#c9bcff}.code .s{color:#7ee0c3}.code .c{color:#52607a}
+.tbl-wrap{overflow-x:auto}
+.tbl{width:100%;border-collapse:collapse;font-size:12.8px;min-width:420px}
+.tbl th{text-align:left;font-size:10.5px;letter-spacing:1.6px;color:var(--dim);text-transform:uppercase;padding:9px 12px;border-bottom:1px solid var(--line2)}
+.tbl td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.method-badge{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:3px 9px;border-radius:6px;background:rgba(52,211,153,.14);color:var(--ok);border:1px solid rgba(52,211,153,.35)}
+.ticket{display:flex;gap:11px;background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:12px 14px;cursor:pointer;transition:.15s;align-items:flex-start}
+.ticket:hover{border-color:var(--line2)}
+.ticket.on{border-color:rgba(124,92,255,.55);background:rgba(124,92,255,.07)}
+.ticket .tk-id{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--dim)}
+.ticket p{font-size:12.5px;line-height:1.45;margin-top:3px;color:var(--mut)}
+.lvl-badge{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:1px;padding:3px 8px;border-radius:6px;font-weight:700;flex-shrink:0;margin-left:auto}
+.quote{border-left:3px solid var(--acc);background:rgba(124,92,255,.07);border-radius:0 12px 12px 0;padding:15px 19px;font-size:14px;line-height:1.6;color:#d5dcef}
+.section-title{font-size:13px;letter-spacing:2.4px;text-transform:uppercase;color:var(--dim);font-weight:700;margin:30px 0 14px;display:flex;align-items:center;gap:12px}
+.section-title::after{content:'';flex:1;height:1px;background:var(--line)}
+.chart-box{position:relative;height:280px}
+canvas{max-width:100%}
+
+/* responsive */
+@media (max-width:1180px){
+ .g6{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(2,1fr)}
+ .cs-health{grid-template-columns:repeat(3,1fr)}
+ .sim-days{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:960px){
+ aside#sidebar{transform:translateX(-100%)}
+ body.nav-open aside#sidebar{transform:none;box-shadow:30px 0 80px rgba(0,0,0,.6)}
+ #mainwrap{margin-left:0;width:100%}
+ #burger{display:block}
+ .g2,.g3{grid-template-columns:1fr}
+ .core-layout,.team-climate-grid,.cs-layout,.hr-layout,.support-layout,.edu-layout{grid-template-columns:1fr}
+ .cs-health{grid-template-columns:repeat(2,1fr)}
+ .negmap{grid-template-columns:1fr}
+ .split-card{grid-template-columns:1fr}.split-card .vs{padding:10px}
+ #viewTitle small{display:none}
+ main#content{padding:20px 16px 34px}
+}
+@media (max-width:640px){
+ .g4,.g6{grid-template-columns:1fr 1fr}
+ .sim-days{grid-template-columns:1fr 1fr}
+ .bar-row .bl{width:118px}
+ .tbtn{padding:7px 10px}
+ .tl{display:none}
+ #topbar{padding:9px 12px}
+ #modal-overlay{padding:3vh 10px}
+ #modal-box{padding:20px}
+ .hero{padding:20px 0 6px}
+ .hero-stats{gap:18px}
+ #pres-overlay{padding:24px 16px}
+ #pres-nav{bottom:14px;right:14px}
+ #pres-hint{display:none}
+}
+@media (max-width:420px){.cs-health{grid-template-columns:1fr 1fr}.pill-provider{padding:6px 8px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="app">
+<aside id="sidebar" aria-label="AEIL main navigation">
+  <div class="logo" data-nav="overview" role="button" tabindex="0">
+    <div class="logo-mark" aria-hidden="true">Æ</div>
+    <div><b>AEIL</b><span>Emotional Layer</span></div>
+  </div>
+  <nav class="nav-group" id="navMain" aria-label="Products and modules"></nav>
+  <nav class="nav-group" id="navExtra" aria-label="Additional sections"></nav>
+  <div class="side-foot">AEIL Demo Platform v1.4<br>© 2025 · All rights reserved<br>Questions? <span class="fb-link" data-action="feedback" role="button" tabindex="0">Contact the developers</span></div>
+</aside>
+
+<div id="mainwrap">
+  <header id="topbar">
+    <button id="burger" data-action="burger" aria-label="Open menu">☰</button>
+    <div id="viewTitle"></div>
+    <div class="tspacer"></div>
+    <span class="pill-provider" id="providerPill" data-action="openSettings" role="button" tabindex="0" title="LLM operating mode"><span class="pdot"></span><span id="providerTxt">DEMO SIMULATION</span></span>
+    <button class="tbtn" data-action="loadDemo">⭳ <span class="tl">Load Demo Data</span></button>
+    <button class="tbtn" id="liveBtn" data-action="toggleLive">● <span class="tl">Live Demo</span></button>
+    <button class="tbtn" data-action="openPres">▣ <span class="tl">Presentation</span></button>
+    <button class="tbtn" data-action="openApi">API</button>
+    <button class="tbtn" data-action="openSettings">⚙ <span class="tl">Settings</span></button>
+    <button class="tbtn" data-action="feedback" title="Contact the developers via Telegram" aria-label="Feedback">✉ <span class="tl">Feedback</span></button>
+  </header>
+  <main id="content" aria-live="polite"></main>
+  <footer id="foot">
+   <div class="foot-row">
+    <span>Found a bug, have an idea or a partnership proposal?</span>
+    <button class="btn small ghost" data-action="feedback">✉ Contact the developers</button>
+   </div>
+   © 2025 AEIL Demo Platform · AI Emotional Intelligence Layer. All materials are protected by copyright; use is permitted only under a license from the rights holder. The system models emotional and behavioral context from observed signals and does not read people's minds. All demo data is fictional.
+  </footer>
+</div>
+</div>
+
+<noscript>
+ <section style="max-width:900px;margin:0 auto;padding:40px 20px;line-height:1.7">
+  <h1>AI Emotional Intelligence Layer</h1>
+  <p><strong>Emotional intelligence demo platform for AI systems.</strong> The AEIL methodology adds a human-context layer to AI products: emotions, motivation, relationships, conflict, risk and uncertainty — helping choose a more appropriate action.</p>
+  <h2>One methodology — seven applications</h2>
+  <ul>
+   <li><strong>AI Team Manager</strong> — understanding team state.</li>
+   <li><strong>AI HR Assistant</strong> — emotionally aware interaction with employees.</li>
+   <li><strong>AI Customer Success Manager</strong> — early detection of customer churn risk.</li>
+   <li><strong>AI Sales Manager</strong> — understanding negotiation dynamics and client intent.</li>
+   <li><strong>AI Support Manager</strong> — preventing emotional escalation of tickets.</li>
+   <li><strong>AI Negotiation Assistant</strong> — analysis of positions, interests and conflicts.</li>
+   <li><strong>AI Education Manager</strong> — analysis of learner engagement and behavior changes.</li>
+  </ul>
+  <p>Please enable JavaScript for the interactive demonstration and the feedback form.</p>
+ </section>
+</noscript>
+
+<div id="modal-overlay" role="dialog" aria-modal="true"><div id="modal-box"></div></div>
+<div id="toasts"></div>
+<div id="live-feed" role="log" aria-label="Live Demo feed">
+  <div class="lf-head"><span class="rdot"></span> LIVE DEMO · “Client requirement change” <span style="flex:1"></span><button class="tbtn small" data-action="toggleLive" aria-label="Stop Live Demo">✕</button></div>
+  <div class="lf-body" id="liveBody"></div>
+</div>
+<div id="pres-overlay" role="dialog" aria-modal="true" aria-label="Presentation mode">
+  <button class="tbtn" id="pres-exit" data-action="presExit">✕ Exit (Esc)</button>
+  <div id="pres-stage"></div>
+  <div id="pres-content"></div>
+  <div id="pres-dots"></div>
+  <div id="pres-nav"><button class="tbtn" data-action="presPrev" aria-label="Previous">←</button><button class="tbtn accent" data-action="presNext">Next →</button></div>
+  <div id="pres-hint">Click / <kbd>→</kbd> — next · <kbd>Esc</kbd> — exit. Mode designed for investor presentations.</div>
+</div>
+
+<script>
+/* ================================================================
+   AEIL MULTI-PRODUCT DEMONSTRATOR · v1.4 (English Edition)
+   New: Telegram feedback form (name / contact / subject / message).
+   The developer handle is stored obfuscated and never rendered.
+   Feedback entry points: top bar, sidebar footer, overview hero,
+   page footer.
+================================================================ */
+
+/* ---------- utils ---------- */
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const chartRegistry={};let chartCfgDone=false;
+function chartReady(){ if(typeof Chart==='undefined')return false;
+ if(!chartCfgDone){chartCfgDone=true;Chart.defaults.color='#8b98b0';Chart.defaults.font.family="'JetBrains Mono',monospace";Chart.defaults.font.size=10.5;Chart.defaults.borderColor='rgba(148,163,184,.09)';}
+ return true;}
+function destroyCharts(){Object.keys(chartRegistry).forEach(k=>{chartRegistry[k].destroy();delete chartRegistry[k];});}
+function makeChart(id,cfg){ if(!chartReady())return null;
+ if(chartRegistry[id]){chartRegistry[id].destroy();delete chartRegistry[id];}
+ const el=document.getElementById(id); if(!el)return null;
+ chartRegistry[id]=new Chart(el,cfg); return chartRegistry[id]; }
+const lineOpts=(extra={})=>({responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+ plugins:{legend:{labels:{boxWidth:10,boxHeight:10,padding:14}}},
+ scales:{y:{min:0,max:100,grid:{color:'rgba(148,163,184,.07)'}},x:{grid:{display:false}}},...extra});
+const ds=(label,data,border,dash)=>({label,data,borderColor:border,backgroundColor:border+'22',tension:.38,borderWidth:2,pointRadius:2.5,pointBackgroundColor:border,borderDash:dash||[],fill:false});
+function toast(msg){ const t=document.createElement('div');t.className='toast';t.innerHTML=msg;$('#toasts').appendChild(t);
+ setTimeout(()=>{t.style.opacity='0';t.style.transition='.4s';setTimeout(()=>t.remove(),420)},3400); }
+function openModal(html){ $('#modal-box').innerHTML='<button id="modal-close" data-action="modalClose" aria-label="Close">✕</button>'+html; $('#modal-overlay').classList.add('open'); }
+function closeModal(){ $('#modal-overlay').classList.remove('open'); }
+
+/* ================================================================
+   FEEDBACK (Telegram) — handle is obfuscated, never shown in UI
+================================================================ */
+const FB_HANDLE=atob('QGdlb3JnZTI2MDc='); /* decoded only at runtime */
+const FB_SUBJECTS=['General question','Bug report','Feature request','Partnership / Licensing','Demo request','Other'];
+function openFeedback(){
+ openModal(`<h3 style="font-size:18px;margin-bottom:6px">✉ Feedback</h3>
+ <p class="note" style="margin-bottom:16px">Your message will be delivered to the developers via Telegram. Fill in the form — the composed message will be copied to your clipboard and a chat will open; just paste it and send.</p>
+ <div class="grid g2">
+  <div><label class="field-lbl" for="fbName">Your name *</label>
+   <input type="text" id="fbName" placeholder="e.g. Alex Morgan" maxlength="80"></div>
+  <div><label class="field-lbl" for="fbContact">Your contact *</label>
+   <input type="text" id="fbContact" placeholder="email, phone or Telegram" maxlength="120"></div>
+ </div>
+ <div style="margin-top:14px"><label class="field-lbl" for="fbSubject">Subject *</label>
+  <select id="fbSubject">${FB_SUBJECTS.map((s,i)=>`<option value="${s}" ${i===0?'selected':''}>${s}</option>`).join('')}</select></div>
+ <div style="margin-top:14px"><label class="field-lbl" for="fbMessage">Message *</label>
+  <textarea id="fbMessage" rows="5" maxlength="2000" placeholder="Describe your question, idea or problem…"></textarea></div>
+ <div class="divider"></div>
+ <div class="fb-step"><span class="n">1</span><span><b>Fill in the form</b> — name, contact, subject and message.</span></div>
+ <div class="fb-step"><span class="n">2</span><span><b>Press “Send via Telegram”</b> — the message is copied and the developers’ chat opens.</span></div>
+ <div class="fb-step"><span class="n">3</span><span><b>Paste (Ctrl/Cmd + V) and send</b> — the developers will receive your structured message.</span></div>
+ <p class="note" style="margin-top:10px">🔒 Your data is not stored anywhere: the message is composed locally in your browser and sent only by you.</p>
+ <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap">
+  <button class="btn" data-action="fbSubmit">✈ Send via Telegram</button>
+  <button class="btn ghost" data-action="modalClose">Cancel</button>
+ </div>`);}
+function fbSubmit(){
+ const nameEl=$('#fbName'),contactEl=$('#fbContact'),subjEl=$('#fbSubject'),msgEl=$('#fbMessage');
+ if(!nameEl||!msgEl)return;
+ const name=nameEl.value.trim(),contact=contactEl.value.trim(),subj=subjEl.value,msg=msgEl.value.trim();
+ let ok=true;
+ [[nameEl,name],[contactEl,contact],[msgEl,msg]].forEach(([el,v])=>{
+   el.classList.toggle('fb-err',!v); if(!v)ok=false;});
+ if(!ok){toast('Please fill in all required fields');return;}
+ const text='AEIL Demo Platform — Feedback\n\n'+
+   'Name: '+name+'\n'+
+   'Contact: '+contact+'\n'+
+   'Subject: '+subj+'\n\n'+
+   'Message:\n'+msg;
+ const deliver=()=>{
+   closeModal();
+   window.open('https://t.me/'+FB_HANDLE.replace('@',''),'_blank','noopener');
+   toast('✓ Message copied — paste it into the Telegram chat that just opened');};
+ const fallback=()=>{const ta=document.createElement('textarea');ta.value=text;
+   ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);
+   ta.focus();ta.select();try{document.execCommand('copy');}catch(e){}ta.remove();deliver();};
+ if(navigator.clipboard&&navigator.clipboard.writeText){
+   navigator.clipboard.writeText(text).then(deliver).catch(fallback);
+ }else fallback();}
+
+/* ---------- icons ---------- */
+const I={
+ users:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="9" cy="8" r="3.2"/><path d="M2.8 19c.6-3.4 3.2-5 6.2-5s5.6 1.6 6.2 5"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.3c2.6.3 4.6 1.7 5.2 4.3"/></svg>',
+ heart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 20s-7-4.4-7-9.5A4 4 0 0 1 12 8a4 4 0 0 1 7 2.5C19 15.6 12 20 12 20z"/></svg>',
+ target:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>',
+ trend:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M3 17l6-6 4 4 7-8"/><path d="M14 7h6v6"/></svg>',
+ headset:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="3" y="13" width="4" height="6" rx="2"/><rect x="17" y="13" width="4" height="6" rx="2"/><path d="M19 19v1a2 2 0 0 1-2 2h-4"/></svg>',
+ scale:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 3v18M6 21h12M12 6l-6 2 6-2 6 2"/><path d="M3 13a3 3 0 0 0 6 0L6 8zM15 13a3 3 0 0 0 6 0l-3-5z"/></svg>',
+ cap:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M2 9.5L12 4l10 5.5L12 15z"/><path d="M6.5 12v4.5c0 1.5 2.5 3 5.5 3s5.5-1.5 5.5-3V12"/></svg>',
+ layers:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5M3 17l9 5 9-5"/></svg>',
+ flask:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M9 3h6M10 3v5l-5.6 9.2A2.4 2.4 0 0 0 6.5 21h11a2.4 2.4 0 0 0 2.1-3.8L14 8V3"/><path d="M7.5 15h9"/></svg>',
+ split:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="7.5" height="16" rx="2"/><rect x="13.5" y="4" width="7.5" height="16" rx="2"/></svg>',
+ shield:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3l7.5 3v6c0 5-3.2 7.7-7.5 9-4.3-1.3-7.5-4-7.5-9V6z"/><path d="M9 12l2 2 4-4"/></svg>',
+ compass:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>'};
+
+/* ---------- products ---------- */
+const PRODUCTS=[
+ {id:'team',nav:'AI Team Manager',name:'AI Team Manager',icon:I.users,color:'#60a5fa',tag:'Understanding team state.',pipe:'Emotion → Motivation → Workload → Conflict → Team Risk'},
+ {id:'hr',nav:'AI HR Assistant',name:'AI HR Assistant',icon:I.heart,color:'#f472b6',tag:'Emotionally aware interaction with employees.',pipe:'Facts → Causes → Strategy → Safe wording'},
+ {id:'cs',nav:'AI Customer Success',name:'AI Customer Success Manager',icon:I.target,color:'#34d399',tag:'Early detection of customer churn risk.',pipe:'Emotion → Engagement → Trust → Churn Risk'},
+ {id:'sales',nav:'AI Sales Manager',name:'AI Sales Manager',icon:I.trend,color:'#fbbf24',tag:'Understanding negotiation dynamics and client intent.',pipe:'Emotion → Trust → Intent → Deal Risk'},
+ {id:'support',nav:'AI Support Manager',name:'AI Support Manager',icon:I.headset,color:'#fb7185',tag:'Preventing emotional escalation of tickets.',pipe:'Emotion → Escalation → Response'},
+ {id:'neg',nav:'AI Negotiation',name:'AI Negotiation Assistant',icon:I.scale,color:'#a78bfa',tag:'Analysis of positions, interests and conflicts.',pipe:'Emotion → Position → Interest → Conflict → Resolution'},
+ {id:'edu',nav:'AI Education',name:'AI Education Manager',icon:I.cap,color:'#2dd4bf',tag:'Analysis of learner engagement and behavior changes.',pipe:'Engagement → Behavior → Momentum → Support'}];
+const prod=id=>PRODUCTS.find(p=>p.id===id);
+const NAV_MAIN=[{id:'overview',lbl:'Overview',ic:I.compass},{id:'core',lbl:'AEIL Core',ic:I.layers},
+ ...PRODUCTS.map(p=>({id:p.id,lbl:p.nav,ic:p.icon,dot:p.color})),
+ {id:'simulator',lbl:'AEIL Simulator',ic:I.flask},{id:'methodology',lbl:'Methodology',ic:I.compass}];
+const NAV_EXTRA=[{id:'beforeafter',lbl:'Before / After AEIL',ic:I.split},{id:'safety',lbl:'Safety Center',ic:I.shield}];
+const VIEW_TITLES={overview:'Overview',core:'AEIL Core',team:'AI Team Manager',hr:'AI HR Assistant',cs:'AI Customer Success',sales:'AI Sales Manager',support:'AI Support Manager',neg:'AI Negotiation',edu:'AI Education',simulator:'AEIL Simulator',methodology:'Methodology',beforeafter:'Before / After AEIL',safety:'Safety Center'};
+function buildNav(){
+ $('#navMain').innerHTML='<div class="nav-label">Platform</div>'+NAV_MAIN.map(n=>`<div class="nav-item" data-nav="${n.id}" role="link" tabindex="0">${n.dot?`<span class="dot" style="background:${n.dot}"></span>`:n.ic}${n.lbl}</div>`).join('');
+ $('#navExtra').innerHTML='<div class="nav-label">Showcase</div>'+NAV_EXTRA.map(n=>`<div class="nav-item" data-nav="${n.id}" role="link" tabindex="0">${n.ic}${n.lbl}</div>`).join('');}
+
+/* ================================================================
+   AEIL CORE ENGINE
+================================================================ */
+const SETTINGS={provider:'mock',apiKey:'',animations:true};
+const MockProvider={name:'DEMO SIMULATION'};
+const OpenAIProvider={name:'LIVE AI'};
+const CORE_STAGES=['INPUT','OBSERVATION','EMOTION','CONTEXT','MOTIVATION','RELATIONSHIP','CONFLICT','RISK','PREDICTION','RECOMMENDATION','SAFETY CHECK'];
+const AEIL={
+ provider:()=>SETTINGS.provider==='openai'?OpenAIProvider:MockProvider,
+ analyzeEmotion(t){const sig=[];const T=t.toLowerCase();
+  const has=a=>a.some(w=>T.includes(w));
+  if(has(['angry','furious','annoy','irritat','fed up','sick of','how many times','third time','again','why does nobody','why no one']))sig.push(['Frustration',.78+.05*Math.random()]);
+  if(has(['overwhelm','tired','burn','too much','can’t cope','cant cope','pressure','stress','deadline']))sig.push(['Stress',.6+.08*Math.random()]);
+  if(has(['don’t understand','dont understand','do not understand','why are we','unclear','confus']))sig.push(['Confusion',.5+.08*Math.random()]);
+  if(has(['doubt','not sure','promised','were promised','skeptic']))sig.push(['Skepticism',.55+.08*Math.random()]);
+  if(has(['unfair','ignored','hurt','resent']))sig.push(['Resentment',.5+.07*Math.random()]);
+  if(has(['thank','great','awesome','perfect','love it','happy']))sig.push(['Positive',.6+.1*Math.random()]);
+  if(!sig.length)sig.push(['Neutral tension',.32]);
+  return sig.map(([n,v])=>({name:n,value:Math.min(.96,+v.toFixed(2))}));},
+ analyzeContext(t){const T=t.toLowerCase();const c=[];
+  if(T.includes('requirement'))c.push('Requirements have been changed repeatedly.');
+  if(T.includes('deadline')||T.includes('due date'))c.push('Deadline pressure.');
+  if(T.includes('redo')||T.includes('rework'))c.push('The same work is being redone.');
+  if(T.includes('promised'))c.push('Previously made promises were not kept.');
+  if(!c.length)c.push('Routine work communication without visible external pressure.');
+  return c;},
+ analyzeMotivation(s){const top=s[0]?.name||'';
+  if(top==='Frustration'||top==='Stress')return 'Sense of control — declining';
+  if(top==='Skepticism')return 'Trust in commitments — declining';
+  return 'Motivation — stable / unclear';},
+ runSafetyCheck(){return ['No diagnosis — the system does not make medical or psychological diagnoses.','No mind reading — conclusions are probabilistic hypotheses.','Human decision — the final decision always remains with a person.'];},
+ runAnalysis(text){
+  const observations=this.analyzeContext(text),emo=this.analyzeEmotion(text);
+  const mot=this.analyzeMotivation(emo),m=Math.max(...emo.map(s=>s.value),0);
+  const causes=[];
+  if(observations.join(' ').includes('requirement'))causes.push({name:'Requirement instability',value:.83});
+  if(observations.join(' ').includes('promise'))causes.push({name:'Broken commitments',value:.7});
+  causes.push({name:'Workload pressure',value:+(.55+.12*Math.random()).toFixed(2)});
+  return {subject:{type:'conversation'},context:{source:'user input',observations},observations,
+   emotional_signals:emo,behavior_signals:[],motivation_signals:[{label:mot}],relationship_signals:[],
+   possible_causes:causes,risks:[{name:m>.62?'Conflict escalation':'Miscommunication risk',value:+(m*.86).toFixed(2)}],
+   predictions:[],recommendations:[observations.join(' ').includes('requirement')?'Lock down the final requirements before continuing the work.':(emo[0].name==='Stress'?'Review workload and priorities before demanding results.':'Clarify context and expectations in a direct conversation, avoiding pressure.')],
+   confidence:Math.min(88,Math.round(58+Math.min(30,emo.length*7+text.length/40))),
+   uncertainty:['High confidence in the observed signals.','Medium confidence in the cause.','Insufficient data to determine intent.'],
+   safety_flags:this.runSafetyCheck()};}
+};
+const CORE_SCENARIOS={
+ req:{lbl:'“Requirement changes”',text:'I don’t understand why we keep changing the requirements. I’ve already redone this task three times.'},
+ client:{lbl:'“Client silent for 4 days”',text:'The client stopped responding after we discussed the timeline. They used to reply within an hour, but now there has been silence for four days.'},
+ support:{lbl:'“Repeated ticket”',text:'This is the third time I’m contacting you about this issue. Why can’t anyone solve the problem properly?'},
+ burn:{lbl:'“Overwhelmed and burning out”',text:'I can’t keep up with my tasks after the workload was redistributed. I’m tired, pressure is growing and deadlines are slipping.'}};
+const CORE_PRESET={observation:'Requirements have been changed several times. The task is being redone repeatedly.',
+ emo:[['Frustration',.78],['Stress',.64]],context:['Repeated requirement changes.'],
+ causes:[['Requirement instability',83],['Workload pressure',61]],mot:'Sense of control — declining',
+ risk:['Conflict escalation',.68],rec:'Lock down the final requirements before continuing the work.',conf:76,
+ unc:['High confidence in the observed behavior change.','Medium confidence in the assumed cause.','Insufficient data to determine the user’s intent.'],
+ why:{ev:['Requirements changed several times','Task redone for the third time'],ctx:'Repeated requirement changes inside an active sprint',inf:'Requirement instability is the main driver of frustration (hypothesis)',risk:'Conflict escalation 0.68 if work continues without a fix',alt:'Alternative “just support the team” — does not remove the cause'}};
+
+/* ================================================================
+   DEMO DATA (all datasets are fictional)
+================================================================ */
+const TEAM_HEALTH=[['Stress',61,'up'],['Engagement',72,'down'],['Workload',78,'up'],['Conflict Risk',34,'flat'],['Communication',69,'flat'],['Human Risk',57,'flat']];
+const TEAM_MEMBERS=[
+ {name:'Anna',role:'Designer',color:'#f472b6',workload:'High',engagement:'Stable',stress:'Rising',risk:'Medium',load:82,overdue:2,
+  tasks:['Personal dashboard redesign — deadline in 2 days','Icons for the mobile release','Revisions after requirement changes (3rd iteration)'],
+  emo:[['Frustration',.62,'↑'],['Stress',.58,'↑'],['Fatigue in messages',.51,'↑']],motiv:{Clarity:54,Recognition:71,Autonomy:66},
+  rec:'Hold a 1:1, clarify the final requirements and remove unnecessary revisions. Acknowledge her contribution — Anna is redoing the same work for the third time without negative feedback.',
+  why:{ev:['3 reworks of one task in 2 weeks','2 overdue tasks this sprint','Messages became shorter and drier'],ctx:'Requirement changes were initiated by the client 4 days ago',inf:'Frustration growth correlates with requirement instability (hypothesis)',risk:'Engagement drop and conflict with the project manager',alt:'Alternative “just extend the deadline” — does not remove the cause'}},
+ {name:'Mark',role:'Backend',color:'#60a5fa',workload:'Very High',engagement:'Stable',stress:'High',risk:'Medium',load:91,overdue:1,
+  tasks:['API for the release','Database migration','Reviewing 6 PRs'],emo:[['Stress',.71,'↑'],['Overload',.68,'↑']],motiv:{Clarity:72,Recognition:58,Autonomy:61},
+  rec:'Redistribute code review. Load 91% — a sustained risk to quality and a burnout signal.',
+  why:{ev:['9 tasks in the sprint vs. a norm of 6','Chat replies after 21:00'],ctx:'Release in 10 days',inf:'Load above sustainable level (observation)',risk:'Release deadline at risk',alt:'Contractor — slower than redistribution'}},
+ {name:'Sofia',role:'Frontend',color:'#34d399',workload:'Medium',engagement:'High',stress:'Low',risk:'Low',load:64,overdue:0,
+  tasks:['Design system components','Onboarding page'],emo:[['Positive tone',.66,'→']],motiv:{Clarity:81,Recognition:74,Autonomy:79},
+  rec:'Keep the current task-setting format. A mentoring role for new members is possible.',
+  why:{ev:['All tasks on time','Actively helps in the team chat'],ctx:'Stable context',inf:'High engagement (observation)',risk:'Minimal',alt:'—'}},
+ {name:'Dmitry',role:'QA',color:'#fbbf24',workload:'High',engagement:'Declining',stress:'Rising',risk:'Medium',load:77,overdue:1,
+  tasks:['Release regression','API autotests'],emo:[['Frustration',.55,'↑'],['Skepticism about deadlines',.49,'↑']],motiv:{Clarity:49,Recognition:62,Autonomy:52},
+  rec:'Clarify regression priorities: testing scope has grown along with the requirement changes.',
+  why:{ev:['Comments like “everything changed again”','Growing response time'],ctx:'Requirement changes affected the test plan',inf:'Unclear priorities (hypothesis)',risk:'Missed defects before release',alt:'—'}},
+ {name:'Lena',role:'Analytics',color:'#a78bfa',workload:'Medium',engagement:'Stable',stress:'Low',risk:'Low',load:58,overdue:0,
+  tasks:['Release metrics dashboard'],emo:[['Neutral',.3,'→']],motiv:{Clarity:76,Recognition:66,Autonomy:70},
+  rec:'No action needed. State is stable.',why:{ev:['Metrics within normal range'],ctx:'—',inf:'Stability (observation)',risk:'—',alt:'—'}},
+ {name:'Igor',role:'DevOps',color:'#fb7185',workload:'High',engagement:'Stable',stress:'Medium',risk:'Low',load:74,overdue:0,
+  tasks:['CI/CD for the release','Monitoring'],emo:[['Stress',.44,'→']],motiv:{Clarity:69,Recognition:60,Autonomy:83},
+  rec:'Keep monitoring. Load is high but sustainable.',why:{ev:['Tasks on time'],ctx:'Release period',inf:'Moderate load (observation)',risk:'Low',alt:'—'}}];
+const TEAM_CLIMATE_7={labels:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],Stress:[52,55,58,57,61,63,61],Engagement:[78,76,75,74,72,71,72],Frustration:[38,42,47,50,54,58,56],Workload:[66,69,72,74,77,79,78]};
+const TEAM_CLIMATE_30=(()=>{const mk=(b,a,p)=>Array.from({length:30},(_,i)=>Math.round(b+a*Math.sin(i/4.3)+i*p));
+ return {labels:Array.from({length:30},(_,i)=>'D'+(i+1)),Stress:mk(46,5,.5),Engagement:mk(80,4,-.3),Frustration:mk(33,6,.75),Workload:mk(63,5,.5)};})();
+const HR_EMPLOYEES=['Anna V. (Design)','Mark L. (Engineering)','Sofia K. (Engineering)','Dmitry P. (QA)','Igor S. (Infrastructure)'];
+const HR_TYPES=['Performance Feedback','Conflict','Onboarding','Difficult Conversation','Workload Problem','Manager Feedback'];
+const CS_CUSTOMERS=[
+ {n:'Vector Labs',s:58,churn:67,st:'at-risk'},{n:'Nordwind Retail',s:82,churn:12,st:'healthy'},{n:'Sfera Bank',s:64,churn:41,st:'watch'},
+ {n:'Orbit Media',s:76,churn:19,st:'healthy'},{n:'GreenLine',s:51,churn:71,st:'at-risk'},{n:'TechProm',s:69,churn:33,st:'watch'},
+ {n:'Luna Foods',s:85,churn:8,st:'healthy'},{n:'DeltaSoft',s:73,churn:24,st:'watch'},{n:'Aria Clinic',s:79,churn:15,st:'healthy'},{n:'Kite Logistics',s:60,churn:47,st:'watch'}];
+const CS_TIMELINE=[['Day 1','Customer satisfied','Onboarding completed, positive tone','#34d399'],['Day 5','Feature request','Requested a report export feature','#60a5fa'],['Day 8','Delayed response','Support reply took 3 days instead of a few hours','#fbbf24'],['Day 11','Frustration detected','Irritation signals appeared in emails','#fb7185'],['Day 14','Engagement declining','Product activity −31%, shorter messages','#fb7185'],['Day 17','Churn risk increased','Churn risk grew to 67%','#fb7185']];
+const CS_JOURNEY={labels:['D1','D3','D5','D8','D11','D14','D17'],Satisfaction:[82,79,74,70,62,56,58],Engagement:[78,75,72,63,57,51,49],Frustration:[22,26,31,48,60,69,72],Trust:[80,77,73,69,65,62,61]};
+const SALES_DEALS=[['Sfera Bank — Pilot',64,42],['Alpha Retail — Enterprise',71,31],['Orbit Media — Expansion',55,48],['TechProm — Renewal',82,18],['DeltaSoft — Trial',47,58]];
+const SALES_DIALOGUE=[['Sales','We can deliver the solution in 3 weeks.'],['Client','That’s too long.'],['Sales','We can speed it up.'],['Client','We were promised this before.']];
+const SUPPORT_TICKETS=(()=>{
+ const t=[{id:'T-2201',client:'Vector Labs',txt:'This is the third time I’m contacting you about this issue. Why can’t anyone solve the problem properly?',f:.84,a:.71,esc:.79,lvl:3},
+ {id:'T-2204',client:'GreenLine',txt:'This is outrageous! How long do we have to wait?! Refund the money immediately!',f:.9,a:.88,esc:.92,lvl:4},
+ {id:'T-2207',client:'Luna Foods',txt:'Could you tell me how to change the plan? I couldn’t find it in the docs.',f:.12,a:.05,esc:.08,lvl:1},
+ {id:'T-2210',client:'Sfera Bank',txt:'The integration issue is still not resolved, although we reached out last week. We are waiting.',f:.62,a:.41,esc:.58,lvl:2},
+ {id:'T-2212',client:'Orbit Media',txt:'The export hasn’t arrived for two days. It’s starting to block our work.',f:.55,a:.36,esc:.49,lvl:2}];
+ const gen=['The statistics section won’t open.','How do I add a new user?','Error when exporting to PDF.','Dashboard loads very slowly.','We were charged twice.','Access disappeared after the update.','Notification settings don’t persist.','Question about the Enterprise plan.','Data doesn’t sync with our CRM.','Long response on ticket #118.','Can’t log in from a new device.','The report numbers look wrong.'];
+ const cls=['TechProm','Kite Logistics','Aria Clinic','Nordwind Retail','DeltaSoft','Aria Clinic','TechProm','Luna Foods','Orbit Media','GreenLine','Nordwind Retail','DeltaSoft'];
+ gen.forEach((g,i)=>{const f=+(.2+.5*Math.abs(Math.sin(i*2.7))).toFixed(2);const a=Math.max(.05,f-.2);const e=Math.min(.97,+(f*1.05+.08).toFixed(2));
+  t.push({id:'T-'+(2220+i*3),client:cls[i],txt:g,f,a:+a.toFixed(2),esc:e,lvl:e>.8?4:e>.6?3:e>.35?2:1});});
+ return t;})();
+const LVL_META={1:{c:'#34d399',t:'LEVEL 1 — Normal',s:'Standard reply. Normal response time, regular script.'},
+ 2:{c:'#fbbf24',t:'LEVEL 2 — Frustration',s:'Acknowledge the problem + a concrete next step with a date.'},
+ 3:{c:'#fb7185',t:'LEVEL 3 — Escalation',s:'Personal handling + priority escalation to a specialist.'},
+ 4:{c:'#f43f5e',t:'LEVEL 4 — Critical Escalation',s:'Immediate handoff to a senior specialist / manager.'}};
+const TONE_RESPONSES={
+ Professional:'Hello! Thank you for reaching out again. We have recorded that the issue was not resolved during previous contacts and have assigned it to a dedicated specialist. A resolution will be provided within 24 hours, and we will keep you informed at every stage. We apologize for the delay.',
+ Empathetic:'Hello! I understand how frustrating it is to contact us three times and still not get a resolution — this is truly our failure, and I sincerely apologize. I am personally taking ownership of your case: within 4 hours I will share the first concrete result and stay with you until it is fully resolved.',
+ Concise:'Received. Repeated contact logged, priority raised. Resolution within 24 hours. Owner: A. Kovalev. Status updates will be sent automatically.',
+ 'De-escalating':'Hello! Thank you for writing again — I can see that we failed to solve this issue twice, and that is entirely our responsibility. You don’t need to explain anything again: I have already reviewed the full history. I am handing the case to a senior specialist right now and will come back within 2 hours with a concrete plan and timeline. My direct contact will be in the same message.'};
+const NEG_SCENARIOS=[
+ {lbl:'Price and timeline',
+  A:{name:'Participant A · Client',pos:'“I don’t agree to this price. We need −20% and launch in 6 weeks”',int:'Fit the quarter budget and hit the internal launch KPI',con:'Fear of exceeding the budget in front of management',emo:'Pressure, anxiety (0.61)',lim:'Budget locked to the Q3 frame'},
+  B:{name:'Participant B · Vendor',pos:'“A discount is impossible, the timeline is 9 weeks minimum”',int:'Protect margin and the long-term partnership',con:'Creating a discount precedent for other clients',emo:'Caution (0.44)',lim:'Pricing policy and team capacity'},
+  conflict:'Positions on price and timeline diverge; both sides are constrained by external commitments.',
+  common:['Successful launch this quarter','Transparent scope','Long-term cooperation'],
+  sol:['Split the scope: critical part in 6 weeks, the rest in phase 2','Stage-based payments upon milestone completion','Fixed-price pilot with an extension option'],
+  opts:{a:{cr:38,ap:74,ri:'+ high'},b:{cr:44,ap:66,ri:'+ medium'},c:{cr:29,ap:81,ri:'+ very high'}}},
+ {lbl:'Delivery delay',
+  A:{name:'Participant A · Customer',pos:'“A penalty for every day of delay”',int:'Avoid breaking their own production chain',con:'Risk of stopping the line',emo:'Irritation (0.66)',lim:'Obligations to their own clients'},
+  B:{name:'Participant B · Supplier',pos:'“The delay is force majeure, penalty does not apply”',int:'Avoid losses and keep the contract',con:'Cash gap if the penalty is paid',emo:'Defensive stance (0.52)',lim:'Limited production capacity'},
+  conflict:'The dispute about the cause of the delay blocks any discussion of a solution.',
+  common:['Complete the delivery','Preserve the contract','Minimize total losses'],
+  sol:['Expedited partial delivery of critical items','Service-based compensation instead of a cash penalty','Revised schedule with a guaranteed date'],
+  opts:{a:{cr:41,ap:70,ri:'+ high'},b:{cr:47,ap:63,ri:'+ medium'},c:{cr:27,ap:79,ri:'+ very high'}}},
+ {lbl:'Vendor switching',
+  A:{name:'Participant A · Procurement',pos:'“We are moving to the alternative vendor — it’s cheaper”',int:'Cut costs and show savings to management',con:'Hidden risk of switching vendors',emo:'Plan pressure (0.58)',lim:'Target savings of 15%'},
+  B:{name:'Participant B · Current vendor',pos:'“Our price is justified by quality”',int:'Keep the client and the revenue forecast',con:'Losing the case and the project team',emo:'Wary (0.49)',lim:'Minimum margin on the contract'},
+  conflict:'The negotiation is about price, while the customer’s real interest is hitting the savings target.',
+  common:['Measurable savings for the customer','Supply stability','Continued cooperation'],
+  sol:['Discount in exchange for an annual contract','Optimizing the service bundle by 15%','Bonus terms instead of a direct price cut'],
+  opts:{a:{cr:36,ap:72,ri:'+ high'},b:{cr:45,ap:61,ri:'+ medium'},c:{cr:31,ap:77,ri:'+ very high'}}}];
+const EDU_LEARNERS=[
+ {n:'Maria O.',c:'Data Analytics',eng:54,delta:-37,st:'at-risk'},{n:'Alex T.',c:'UX Design',eng:81,delta:+4,st:'ok'},{n:'Irene S.',c:'Python',eng:62,delta:-12,st:'watch'},
+ {n:'Paul D.',c:'Data Analytics',eng:77,delta:+2,st:'ok'},{n:'Nina K.',c:'Project Management',eng:58,delta:-21,st:'watch'},{n:'Oleg F.',c:'Python',eng:84,delta:+6,st:'ok'},
+ {n:'Daria M.',c:'Marketing',eng:49,delta:-29,st:'at-risk'},{n:'Sergey B.',c:'UX Design',eng:72,delta:-3,st:'ok'},{n:'Alina V.',c:'Marketing',eng:68,delta:-8,st:'watch'},{n:'Roman G.',c:'Project Management',eng:79,delta:+1,st:'ok'}];
+const EDU_TIMELINE=[['Week 1','High engagement','Regular answers, proactive questions','#34d399'],['Week 2','Stable','Steady task completion','#60a5fa'],['Week 3','Task delays','First late submissions','#fbbf24'],['Week 4','Participation ↓','Fewer questions and comments in sessions','#fb7185'],['Week 5','Frustration signals ↑','“I can’t get it” messages, longer response time','#fb7185']];
+const SIM_SCENARIOS=[
+ {id:'team',lbl:'Team Conflict',base:[22,34,48,58,67,78,74,36],ev:['Normal','Workload ↑','Stress ↑','Communication ↓','Conflict detected','Risk ↑','AI intervention','Risk ↓']},
+ {id:'churn',lbl:'Customer Churn',base:[18,27,39,52,63,76,70,32],ev:['Normal','Responses slower','Frustration ↑','Engagement ↓','Silence detected','Churn risk ↑','AI intervention','Risk ↓']},
+ {id:'sales',lbl:'Sales Negotiation',base:[25,33,44,57,64,73,66,30],ev:['Normal','Objection raised','Skepticism ↑','Trust ↓','Stall detected','Deal risk ↑','AI intervention','Risk ↓']},
+ {id:'support',lbl:'Support Escalation',base:[30,41,52,63,72,84,77,34],ev:['Normal','Repeat contact','Frustration ↑','Anger signals','Escalation detected','Critical risk ↑','AI intervention','Risk ↓']},
+ {id:'burnout',lbl:'Employee Burnout Risk',base:[20,31,43,55,66,75,69,31],ev:['Normal','Overtime ↑','Stress ↑','Withdrawal','Burnout signals','Risk ↑','AI intervention','Risk ↓']},
+ {id:'student',lbl:'Student Engagement',base:[19,28,37,49,58,69,63,28],ev:['Normal','Task delays','Confusion ↑','Participation ↓','Frustration ↑','Dropout risk ↑','AI intervention','Risk ↓']}];
+const SIM_INTERP={Low:.72,Medium:1,High:1.28};
+const BA_CASES=[
+ {lbl:'Overdue task',wo:'Task overdue.',woAct:'Send deadline reminder.',
+  wi:'Task overdue. Workload increased 34%. Communication changed significantly. Frustration signals detected. Possible cause: conflicting priorities (hypothesis).',wiAct:'Avoid immediate pressure. First clarify workload and changed priorities. The current communication pattern suggests elevated frustration.',
+  out:'Conflict prevented, the task was redistributed, the deadline moved realistically.'},
+ {lbl:'Client replies “Ok”',wo:'Client replied “Ok”. Conversation closed.',woAct:'Mark conversation as resolved.',
+  wi:'Replies became 68% shorter than usual. Response time increased. Tone shifted from detailed to one-word. Possible engagement decline (hypothesis).',wiAct:'Don’t close the dialogue. A gentle follow-up with a concrete question in 24 hours.',
+  out:'An unresolved integration issue was revealed before escalation.'},
+ {lbl:'Repeated support ticket',wo:'Repeated ticket. Same answer template sent.',woAct:'Resend knowledge-base article.',
+  wi:'Third contact about the same issue. Frustration 0.84, Anger 0.71, Escalation risk 0.79. Previous answers did not solve the problem.',wiAct:'Level 3 — personal handling, acknowledge the repetition, priority escalation.',
+  out:'Escalation defused, the client’s NPS recovered from −2 to +8.'},
+ {lbl:'Objection “too expensive”',wo:'Objection: price too high. Send discount offer.',woAct:'Offer 10% discount.',
+  wi:'The objection may be tied to a budget constraint rather than value. Trust is stable, doubt about ROI is rising (hypothesis).',wiAct:'First clarify the budget context and the client’s KPIs, then propose a phased rollout.',
+  out:'Deal preserved without a discount: a phased format was chosen.'}];
+const LIVE_SCRIPT=[
+ {t:'MESSAGE',c:'#60a5fa',x:'Client: “We need to change the requirements for the personal dashboard again”'},
+ {t:'TASK',c:'#8b98b0',x:'Task T-431 moved to status “rework” (3rd iteration)'},
+ {t:'WORKLOAD',c:'#fbbf24',x:'Anna’s load: 74% → 82% · Workload ↑'},
+ {t:'EMOTION',c:'#fb7185',x:'AEIL: Frustration 0.62 ↑ · Stress 0.58 ↑ (interpretation)'},
+ {t:'BEHAVIOR',c:'#fbbf24',x:'Anna’s messages became 41% shorter · replies slower'},
+ {t:'CONTEXT',c:'#60a5fa',x:'AEIL: repeated requirement changes 2 weeks before release'},
+ {t:'MOTIVATION',c:'#a78bfa',x:'Sense of control — declining (hypothesis)'},
+ {t:'CONFLICT',c:'#fb7185',x:'Conflict risk detected: thread with the project manager'},
+ {t:'RISK',c:'#fb7185',x:'Conflict escalation — 0.68 · Release at risk'},
+ {t:'PREDICTION',c:'#fbbf24',x:'Without intervention: deadline slip with 64% probability (estimate)'},
+ {t:'RECOMMENDATION',c:'#34d399',x:'AEIL: lock final requirements + 1:1 with Anna + redistribute revisions'},
+ {t:'HUMAN DECISION',c:'#34d399',x:'The manager confirmed the actions. Changes locked down.'},
+ {t:'OUTCOME',c:'#34d399',x:'5 days later: Stress −24%, Engagement +11%, conflict never developed'}];
+const PRES_SLIDES=[
+ {stage:'Problem',h:'The client is changing requirements for the third time, two weeks before the release.',b:'<div class="big-sigs"><div class="bsig">Rework iterations<b>×3</b></div><div class="bsig">Days to release<b>14</b></div><div class="bsig">Team under pressure<b>6 people</b></div></div>'},
+ {stage:'Human Signals',h:'A regular AI only sees tasks. People are already sending signals.',b:'<div class="big-sigs"><div class="bsig">Frustration<b>0.78 ↑</b></div><div class="bsig">Stress<b>0.64 ↑</b></div><div class="bsig">Communication<b>−41%</b></div><div class="bsig">Delays<b>×2</b></div></div>'},
+ {stage:'AEIL Analysis',h:'AEIL connects emotions, context, motivation and history.',b:'<div class="flow-chips" style="justify-content:center"><span class="fc">Emotion</span><span class="fa">→</span><span class="fc">Context</span><span class="fa">→</span><span class="fc">Motivation</span><span class="fa">→</span><span class="fc">Relationship</span><span class="fa">→</span><span class="fc">Risk</span></div><p style="color:var(--mut);margin-top:16px;font-size:15px">The cause is requirement instability, not a “bad employee”. Sense of control is declining. A probabilistic hypothesis, not a claim.</p>'},
+ {stage:'Risk',h:'Without intervention, the situation develops predictably.',b:'<div class="big-sigs"><div class="bsig">Conflict escalation<b>0.68</b></div><div class="bsig">Release slip<b>64%</b></div><div class="bsig">Burnout risk<b>↑</b></div></div>'},
+ {stage:'AI Recommendation',h:'AEIL proposes an action with explanation and a confidence level.',b:'<div style="text-align:left;max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:11px"><div class="res-block" style="--rb:#34d399"><p>1 · Lock the final requirements by the end of the day</p></div><div class="res-block" style="--rb:#34d399"><p>2 · Hold 1:1s with key contributors, acknowledge the overload</p></div><div class="res-block" style="--rb:#34d399"><p>3 · Redistribute revisions, remove part of Anna’s tasks</p></div><div style="text-align:center"><span class="conf-pill" style="color:var(--ok)">Confidence: 76% ▾</span></div></div>'},
+ {stage:'Outcome',h:'AEIL turns AI from an information processor into a system that accounts for human context.',b:'<div class="big-sigs"><div class="bsig">Stress<b>−24%</b></div><div class="bsig">Engagement<b>+11%</b></div><div class="bsig">Release<b>on time</b></div><div class="bsig">Conflict<b>prevented</b></div></div>'}];
+
+/* ================================================================
+   SHARED RENDER HELPERS
+================================================================ */
+const riskCls=r=>({Low:'risk-low',Medium:'risk-med',High:'risk-high'}[r]||'risk-none');
+function sigChips(list){return '<div class="sig-grid">'+list.map(s=>`<span class="sig">${esc(s[0])} <b>${typeof s[1]==='number'?s[1].toFixed(2):s[1]}</b>${s[2]?` <span style="color:${s[2]==='↑'?'var(--bad)':'var(--mut)'}">${s[2]}</span>`:''}</span>`).join('')+'</div>';}
+function barRow(label,val,color,extra){return `<div class="bar-row"><span class="bl">${esc(label)}</span><div class="bar-track"><div class="bar-fill" style="width:${val}%;background:${color}"></div></div><span class="bar-val">${extra||val+'%'}</span></div>`;}
+let seq=0;const store={};
+function whyBtn(data,label='Why this recommendation?'){const id='w'+(++seq);store[id]=data;return `<button class="link-btn" data-action="why" data-id="${id}">ⓘ ${label}</button>`;}
+function confPill(v,items){const id='c'+(++seq);store[id]={conf:true,val:v,items};return `<span class="conf-pill" data-action="conf" data-id="${id}" style="color:${v>=75?'var(--ok)':v>=60?'var(--warn)':'var(--bad)'}">Confidence: ${v}% ▾</span>`;}
+function openWhy(d){openModal(`<h3 style="font-size:16px;margin-bottom:18px">ⓘ Explainability — why this recommendation</h3>`+
+ [['Evidence · Observed facts',d.ev,'var(--info)'],['Context',d.ctx,'var(--acc2)'],['Inference · Conclusion (hypothesis)',d.inf,'#b7a3ff'],['Risk · Assessed risk',d.risk,'var(--bad)'],['Alternative',d.alt,'var(--mut)']]
+ .map(([t,v,c])=>`<div style="display:flex;gap:13px;margin-bottom:4px"><div style="width:3px;border-radius:3px;background:${c};flex-shrink:0"></div><div style="padding:6px 0 12px"><div style="font-size:10.5px;letter-spacing:1.6px;color:${c};font-family:'JetBrains Mono',monospace;text-transform:uppercase;margin-bottom:5px">${t}</div><div style="font-size:13.5px;line-height:1.55">${Array.isArray(v)?v.map(x=>'• '+esc(x)).join('<br>'):esc(v||'—')}</div></div></div>`).join('<div class="arrow-down">↓</div>')+
+ `<div class="divider"></div><p class="note">AEIL never hides its reasoning: every recommendation is decomposed into facts, context, inference and alternatives. The final decision remains with a human.</p>`);}
+function openConf(d){openModal(`<h3 style="font-size:16px;margin-bottom:8px">Confidence level</h3>
+ <div style="font-family:'JetBrains Mono',monospace;font-size:34px;font-weight:700;margin:8px 0 14px;color:${d.val>=75?'var(--ok)':d.val>=60?'var(--warn)':'var(--bad)'}">${d.val}%</div>
+ <div class="bar-track" style="margin-bottom:18px"><div class="bar-fill" style="width:${d.val}%;background:var(--grad)"></div></div>`+
+ d.items.map(i=>`<div style="display:flex;gap:10px;padding:8px 0;border-bottom:1px dashed rgba(148,163,184,.12);font-size:13px;line-height:1.5"><span style="color:var(--acc2)">◈</span>${esc(i)}</div>`).join('')+
+ `<div class="divider"></div><p class="note">Uncertainty is part of the methodology. The system explicitly separates what it is confident about from where data is insufficient.</p>`);}
+
+/* ================================================================
+   VIEWS
+================================================================ */
+const VIEWS={};
+VIEWS.overview=()=>`
+<div class="hero">
+ <span class="eyebrow">◈ AEIL · Proof-of-Concept · Demo Platform · works without an API key</span>
+ <h1>AI <span class="gr">Emotional Intelligence Layer</span></h1>
+ <p class="sub">Emotional intelligence demo platform for AI systems. The unified AEIL methodology models emotional and behavioral context from observed signals, context and interaction history — turning a regular AI into a system that accounts for human context when making decisions.</p>
+ <div class="hero-cta">
+  <button class="btn" data-nav="core">▶ Try AEIL Core</button>
+  <button class="btn ghost" data-action="openPres">▣ Presentation Mode</button>
+  <button class="btn ghost" data-action="toggleLive">● Start Live Demo</button>
+  <button class="btn ghost" data-action="feedback">✉ Contact the developers</button>
+ </div>
+ <div class="hero-stats">
+  <div><b>1</b><span>AEIL Core Engine</span></div>
+  <div><b>7</b><span>applied products</span></div>
+  <div><b>12</b><span>pipeline stages</span></div>
+  <div><b>100%</b><span>Demo Mode without an API key</span></div>
+ </div>
+</div>
+<div class="section-title">One methodology → seven applications</div>
+<div class="prod-grid">
+ ${PRODUCTS.map(p=>`
+  <article class="pcard" style="--pc:${p.color}" data-nav="${p.id}">
+   <div style="display:flex;justify-content:space-between;align-items:flex-start">
+     <div class="picon">${p.icon}</div><span class="tag safe">AEIL Core</span>
+   </div>
+   <h4>${p.name}</h4>
+   <p>${p.tag}</p>
+   <div class="ppipe">${p.pipe}</div>
+   <button class="btn small">Try Demo →</button>
+  </article>`).join('')}
+</div>
+<div class="section-title">The core idea</div>
+<div class="split-card">
+ <div class="wo"><span class="tag interp" style="margin-bottom:12px;display:inline-block">Regular AI</span>
+  <h4 style="margin:10px 0 8px">Analyzes information</h4>
+  <p style="color:var(--mut);font-size:13.5px;line-height:1.6">“Task overdue.” → Send deadline reminder.<br>“Client replied Ok.” → Conversation closed.<br>The human context is invisible.</p></div>
+ <div class="vs">VS</div>
+ <div class="wi"><span class="tag action" style="margin-bottom:12px;display:inline-block">AEIL AI</span>
+  <h4 style="margin:10px 0 8px">Analyzes human context</h4>
+  <p style="color:var(--mut);font-size:13.5px;line-height:1.6">Emotions · context · motivation · relationships · conflict · risk · uncertainty → a more appropriate action.</p></div>
+</div>
+<div style="display:flex;gap:12px;margin-top:22px;flex-wrap:wrap">
+ <button class="btn ghost" data-nav="beforeafter">⇄ Before / After AEIL</button>
+ <button class="btn ghost" data-nav="simulator">⚗ AEIL Simulator</button>
+ <button class="btn ghost" data-nav="safety">🛡 Safety Center</button>
+ <button class="btn ghost" data-action="loadDemo">⭳ Load Demo Data</button>
+</div>
+<div class="divider"></div>
+<div class="quote">AEIL does not read minds and never claims to understand human emotions at 100%. The system forms <b>probabilistic hypotheses</b> based on observed signals — and always leaves the critical decision to a human.</div>`;
+
+VIEWS.core=()=>`
+<div class="page-head"><h1>AEIL Core Engine</h1>
+<p>The unified core of the methodology. All seven products use this pipeline: observation → emotion → context → motivation → relationship → conflict → risk → prediction → recommendation → safety check.</p></div>
+<div class="grid core-layout">
+ <div>
+  <div class="card" style="margin-bottom:16px"><h3>Pipeline <span class="en">/ shared by all products</span></h3>
+   <div class="pipe-chain" id="coreChain">${CORE_STAGES.map((s,i)=>`<div class="pipe-stage" data-stage="${i}"><span class="pn">${i+1}</span>${s}${i<CORE_STAGES.length-1?'<span class="connector"></span>':''}</div>`).join('')}</div>
+  </div>
+  <div class="card"><h3>Legend</h3><div class="legend" style="flex-direction:column;align-items:flex-start;gap:8px">
+   <i><span class="tag fact">Fact</span>&nbsp; observed data</i>
+   <i><span class="tag interp">Interpretation</span>&nbsp; signal assessment</i>
+   <i><span class="tag hyp">Hypothesis</span>&nbsp; probabilistic conclusion</i>
+   <i><span class="tag action">Action</span>&nbsp; AEIL recommendation</i>
+  </div></div>
+ </div>
+ <div>
+  <div class="card" style="margin-bottom:16px">
+   <h3>Universal Analyzer <span class="en">/ ${AEIL.provider().name}</span></h3>
+   <label class="field-lbl" for="coreInput">Paste conversation or event</label>
+   <textarea id="coreInput" rows="4" placeholder="E.g.: “I don’t understand why we keep changing the requirements. I’ve already redone this task three times.”">${esc(CORE_SCENARIOS.req.text)}</textarea>
+   <div style="display:flex;gap:8px;flex-wrap:wrap;margin:13px 0">${Object.entries(CORE_SCENARIOS).map(([k,v],i)=>`<button class="chip ${i===0?'on':''}" data-action="corePreset" data-id="${k}">${v.lbl}</button>`).join('')}</div>
+   <button class="btn" id="coreRunBtn" data-action="runCore">⚡ Analyze with AEIL</button>
+   <span class="note" style="margin-left:12px">Works without an API key: local mock model and prepared scenarios.</span>
+  </div>
+  <div id="coreResult"><div class="card" style="text-align:center;color:var(--dim);padding:46px 20px">Run the analysis — pipeline stages will execute sequentially,<br>and the result will be separated into facts, interpretations and hypotheses.</div></div>
+ </div>
+</div>`;
+function corePreset(k){$$('.chip[data-action="corePreset"]').forEach(c=>c.classList.toggle('on',c.dataset.id===k));$('#coreInput').value=CORE_SCENARIOS[k].text;}
+function runCore(){
+ const text=$('#coreInput').value.trim();
+ if(!text){toast('Please enter text to analyze');return;}
+ const btn=$('#coreRunBtn');btn.disabled=true;btn.textContent='⚡ Analyzing…';
+ const stages=$$('.pipe-stage');stages.forEach(el=>el.classList.remove('done','now'));
+ let i=0;
+ const step=()=>{ if(i>0)stages[i-1].classList.replace('now','done');
+  if(i<stages.length){stages[i].classList.add('now');i++;setTimeout(step,SETTINGS.animations?230:30);}
+  else renderCoreResult(text,btn); };
+ step();}
+function renderCoreResult(text,btn){
+ if(!document.getElementById('coreRunBtn'))return; /* view unmounted — abort */
+ btn.disabled=false;btn.textContent='⚡ Analyze with AEIL';
+ let R;
+ if(text.trim()===CORE_SCENARIOS.req.text.trim()){const p=CORE_PRESET;
+  R={observation:p.observation,emo:p.emo,context:p.context,causes:p.causes,mot:p.mot,risk:p.risk,rec:p.rec,conf:p.conf,unc:p.unc,why:p.why};}
+ else{const a=AEIL.runAnalysis(text);
+  R={observation:a.observations.join(' '),emo:a.emotional_signals.map(s=>[s.name,s.value]),context:a.context,
+   causes:a.possible_causes.map(c=>[c.name,Math.round(c.value*100)]),mot:a.motivation_signals[0].label,
+   risk:[a.risks[0].name,a.risks[0].value],rec:a.recommendations[0],conf:a.confidence,unc:a.uncertainty,
+   why:{ev:a.observations,ctx:a.context.join(' '),inf:'Signals matched against context (probabilistic model)',risk:a.risks[0].name+' '+Math.round(a.risks[0].value*100)+'%',alt:'Direct-pressure alternative rejected as escalating'}};}
+ $('#coreResult').innerHTML=`
+ <div class="res-block" style="--rb:var(--info)"><h5>Observation <span class="tag fact">Fact</span></h5><p>${esc(R.observation)}</p></div>
+ <div class="res-block" style="--rb:var(--warn)"><h5>Emotional Signals <span class="tag interp">Interpretation</span></h5>${sigChips(R.emo)}</div>
+ <div class="res-block" style="--rb:var(--info)"><h5>Context <span class="tag fact">Fact</span></h5><p>${R.context.map(esc).join('<br>')}</p></div>
+ <div class="res-block" style="--rb:#a78bfa"><h5>Possible Causes <span class="tag hyp">Hypothesis</span></h5>${R.causes.map(c=>barRow(c[0],typeof c[1]==='number'&&c[1]<=1?Math.round(c[1]*100):c[1],'#a78bfa')).join('')}</div>
+ <div class="res-block" style="--rb:#a78bfa"><h5>Motivation <span class="tag hyp">Hypothesis</span></h5><p>${esc(R.mot)}</p></div>
+ <div class="res-block" style="--rb:var(--bad)"><h5>Risk <span class="tag hyp">Hypothesis</span></h5><p style="font-size:17px;font-weight:800">${esc(R.risk[0])} — <span class="mono" style="color:var(--bad)">${(+R.risk[1]).toFixed(2)}</span></p></div>
+ <div class="res-block" style="--rb:var(--ok)"><h5>Recommendation <span class="tag action">Action</span></h5><p style="font-size:14.5px;font-weight:600">${esc(R.rec)}</p>
+   <div style="margin-top:10px;display:flex;gap:16px;align-items:center;flex-wrap:wrap">${confPill(R.conf,R.unc)} ${whyBtn(R.why)}</div></div>
+ <div class="res-block" style="--rb:var(--acc2)"><h5>Safety Check <span class="tag safe">Safety</span></h5><p class="note" style="font-size:12.5px">${AEIL.runSafetyCheck().map(s=>'✓ '+s).join('<br>')}</p></div>`;
+ toast('AEIL analysis complete · '+AEIL.provider().name);}
+
+/* ---------- TEAM ---------- */
+let teamStressRun=false;
+VIEWS.team=()=>`
+<div class="page-head"><h1>AI Team Manager</h1>
+<p>Analyzes team state and warns the manager about potential problems. Pipeline: ${prod('team').pipe}. AEIL never ranks employees — only state, context and recommendations for the manager.</p></div>
+<div class="card" style="margin-bottom:16px">
+ <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:16px">
+  <h3 style="margin:0">Team Health</h3>
+  <button class="btn small warn" data-action="simTeam">⚠ Simulate Team Stress</button>
+ </div>
+ <div class="grid g6" id="teamHealth">${TEAM_HEALTH.map(m=>`
+   <div class="metric-card" style="--mc:${/Stress|Workload|Human/.test(m[0])?'var(--warn)':m[0].includes('Conflict')?'var(--bad)':'var(--ok)'}">
+     <div class="mc-label">${m[0]}</div><div class="mc-val"><span id="th-${m[0].replace(/\s/g,'')}">${m[1]}</span><span class="mc-trend ${m[2]==='up'?'up':m[2]==='down'?'down':'flat'}">${m[2]==='up'?'↑':m[2]==='down'?'↓':'·'}</span></div>
+     <div class="spark"><i style="width:${m[1]}%;background:currentColor"></i></div>
+   </div>`).join('')}</div>
+</div>
+<div id="teamSimBox"></div>
+<div class="grid team-climate-grid" style="margin-bottom:16px">
+ <div class="card"><h3>Team Emotional Climate</h3>
+   <div style="margin-bottom:12px"><span class="seg" id="teamRange"><button class="on" data-action="teamRange" data-d="7">7 days</button><button data-action="teamRange" data-d="30">30 days</button></span></div>
+   <div class="chart-box"><canvas id="teamChart" aria-label="Team emotional climate chart"></canvas></div>
+ </div>
+ <div class="card"><h3>What the manager sees</h3>
+  <div class="vtl">
+   <div class="vtl-item" style="--vc:#34d399"><div class="vt-day">Today · 09:12</div><div class="vt-txt">Normal operations</div><div class="vt-sub">All metrics within normal range</div></div>
+   <div class="vtl-item" style="--vc:#fbbf24"><div class="vt-day">Today · 11:40</div><div class="vt-txt">Anna’s workload rose to 82%</div><div class="vt-sub">Third rework of a task after requirement changes</div></div>
+   <div class="vtl-item" style="--vc:#fb7185"><div class="vt-day">Today · 14:05</div><div class="vt-txt">Frustration signals from 2 members</div><div class="vt-sub">Recommendation: 1:1s and locking requirements</div></div>
+  </div>
+ </div>
+</div>
+<div class="section-title">Team members · 6 · demo data</div>
+<div class="grid g3">${TEAM_MEMBERS.map((m,i)=>`
+ <div class="member-card" data-action="openMember" data-id="${i}">
+  <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px">
+   <div class="avatar" style="background:${m.color}">${m.name[0]}</div>
+   <div><b style="font-size:14.5px">${m.name}</b><div style="font-size:12px;color:var(--mut)">${m.role}</div></div>
+   <span class="lvl-badge ${riskCls(m.risk)}" style="background:var(--panel3)">${m.risk}</span>
+  </div>
+  <div class="m-row"><span>Workload</span><b class="${m.workload.includes('High')?'risk-high':'risk-med'}">${m.workload}</b></div>
+  <div class="m-row"><span>Engagement</span><b>${m.engagement}</b></div>
+  <div class="m-row"><span>Stress</span><b class="${/Rising|High/.test(m.stress)?'risk-high':'risk-low'}">${m.stress}</b></div>
+  <div class="m-row"><span>Load</span><b class="mono">${m.load}%</b></div>
+ </div>`).join('')}</div>
+<div class="divider"></div>
+<div class="quote">AEIL does not create rankings: there is no “best”, “worst” or “toxic” employee. There is state, context, and what the manager can do to help.</div>`;
+function drawTeamChart(days){const d=days===30?TEAM_CLIMATE_30:TEAM_CLIMATE_7;
+ makeChart('teamChart',{type:'line',data:{labels:d.labels,datasets:[ds('Stress',d.Stress,'#fbbf24'),ds('Engagement',d.Engagement,'#34d399'),ds('Frustration',d.Frustration,'#fb7185'),ds('Workload',d.Workload,'#60a5fa')]},options:lineOpts()});}
+function animNum(id,from,to){const el=document.getElementById(id);if(!el)return;let v=from;const st=setInterval(()=>{v+=Math.sign(to-from)*Math.max(1,Math.abs(to-from)/14);el.textContent=Math.round(v);if((to>from?v>=to:v<=to)){el.textContent=to;clearInterval(st);}},50);}
+function simTeam(){
+ if(teamStressRun){toast('Simulation already running / completed — re-enter the Team view to replay');return;}
+ teamStressRun=true;
+ const steps=[['Workload ↑','Load grows: new tasks, shifted deadlines','#fbbf24','📈'],
+  ['Delay ↑','Overdue tasks appear','#fbbf24','⏱'],
+  ['Frustration ↑','Tone of communication changes, messages get shorter','#fb7185','💬'],
+  ['Engagement ↓','Participation in discussions drops','#fb7185','📉'],
+  ['Conflict Risk ↑','AEIL detects the problem and forms a recommendation','#7c5cff','⚡']];
+ $('#teamSimBox').innerHTML=`<div class="card" style="margin-bottom:16px;border-color:rgba(251,113,133,.35)"><h3 style="color:var(--bad)">⚠ Simulation: team overloaded before release</h3>
+  <div style="display:flex;flex-direction:column;gap:9px">${steps.map((s,i)=>`<div class="chain-step" id="cs-${i}"><span class="ci" style="background:${s[2]}22;color:${s[2]}">${s[3]}</span><div><b>${s[0]}</b> <span style="color:var(--mut);font-weight:500">— ${s[1]}</span></div></div>${i<steps.length-1?'<div class="arrow-down">↓</div>':''}`).join('')}</div>
+  <div id="teamSimAlert"></div></div>`;
+ steps.forEach((_,i)=>setTimeout(()=>{const el=document.getElementById('cs-'+i);if(!el)return;el.classList.add('show');
+  if(i===0)animNum('th-Workload',78,86);if(i===1)animNum('th-Stress',61,79);
+  if(i===2)animNum('th-Engagement',72,58);if(i===3)animNum('th-HumanRisk',57,72);if(i===4)animNum('th-ConflictRisk',34,61);
+ },SETTINGS.animations?i*700:50));
+ setTimeout(()=>{const box=document.getElementById('teamSimAlert');if(!box)return;
+  box.innerHTML=`
+  <div class="res-block" style="--rb:var(--bad);margin-top:16px"><h5>AEIL Alert · Conflict Risk 0.61 ↑ <span class="tag hyp">Hypothesis</span></h5>
+  <p>The load increase coincided with deadline changes and falling engagement. Likely cause — conflicting priorities, not declining team motivation.</p></div>
+  <div class="res-block" style="--rb:var(--ok)"><h5>Recommendation <span class="tag action">Action</span></h5>
+  <p style="font-weight:600">1 · Review priorities before the release · 2 · Hold 1:1s with Anna and Mark · 3 · Temporarily remove part of the overloaded members’ tasks.</p>
+  <div style="margin-top:10px;display:flex;gap:16px;flex-wrap:wrap">${confPill(74,['High confidence in the observed load increase.','Medium confidence in the cause.','Insufficient data about participants’ intentions.'])} ${whyBtn({ev:['Workload +8 points in 3 days','Overdue ×2','Tone of messages changed'],ctx:'Deadline changes before the release',inf:'Conflicting priorities (hypothesis)',risk:'Release slip and team conflict',alt:'Alternative “just remind about the deadline” — increases pressure'})}</div></div>`;
+  toast('AEIL detected the problem: causal chain built');},SETTINGS.animations?steps.length*700+300:200);}
+function openMember(i){const m=TEAM_MEMBERS[i];
+ openModal(`<div style="display:flex;gap:14px;align-items:center;margin-bottom:18px">
+   <div class="avatar" style="background:${m.color};width:52px;height:52px;font-size:20px">${m.name[0]}</div>
+   <div><h3 style="font-size:19px;margin:0">${m.name}</h3><div style="color:var(--mut);font-size:13px">${m.role} · Risk: <b class="${riskCls(m.risk)}">${m.risk}</b></div></div></div>
+  <div class="grid g2">
+   <div><div class="field-lbl">Work Context</div>
+    <p style="font-size:13px;line-height:1.7">${m.tasks.map(t=>'• '+esc(t)).join('<br>')}</p>
+    <div class="m-row"><span>Overdue</span><b>${m.overdue}</b></div>
+    <div class="m-row"><span>Load</span><b class="mono">${m.load}%</b></div>
+    <div class="spark"><i style="width:${m.load}%;background:${m.load>80?'var(--bad)':m.load>65?'var(--warn)':'var(--ok)'}"></i></div>
+   </div>
+   <div><div class="field-lbl">Emotional Signals <span class="tag interp">Interpretation</span></div>
+    ${m.emo.map(e=>barRow(e[0],Math.round(e[1]*100),e[2]==='↑'?'#fb7185':'#34d399',e[1].toFixed(2)+' '+e[2])).join('')}
+   <div class="field-lbl" style="margin-top:16px">Motivation Signals <span class="tag hyp">Hypothesis</span></div>
+    ${Object.entries(m.motiv).map(([k,v])=>barRow(k,v,v>65?'#34d399':'#fbbf24')).join('')}</div>
+  </div>
+  <div class="res-block" style="--rb:var(--ok);margin-top:16px"><h5>AI Recommendation — what the manager should consider <span class="tag action">Action</span></h5>
+   <p style="font-size:13.5px;line-height:1.6">${esc(m.rec)}</p>
+   <div style="margin-top:10px;display:flex;gap:16px;flex-wrap:wrap">${confPill(Math.round(60+m.load/5),['High confidence in observed load metrics.','Medium confidence in motivation assessment.','Intentions and personal circumstances are not evaluated.'])} ${whyBtn(m.why)}</div></div>
+  <p class="note">AEIL does not assess an employee’s “suitability” and never makes employment decisions. This is support for the manager, not a ranking.</p>`);}
+
+/* ---------- HR ---------- */
+let hrType='Difficult Conversation';
+VIEWS.hr=()=>`
+<div class="page-head"><h1>AI HR Assistant</h1>
+<p>Helps prepare for difficult conversations, formulate respectful feedback and surface organizational issues. Demo employees: ${HR_EMPLOYEES.join(', ')}.</p></div>
+<div class="card" style="margin-bottom:16px;border-color:rgba(244,114,182,.3)">
+ <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+  <div style="font-size:14.5px;font-weight:700">🔒 Core principle: AI HR Assistant never makes employment decisions</div>
+  <span class="privacy-badge">🛡 Privacy Protected</span>
+ </div>
+</div>
+<div class="grid hr-layout">
+ <div>
+  <div class="card" style="margin-bottom:16px"><h3>Conversation Type</h3>
+   <div style="display:flex;flex-direction:column;gap:8px">${HR_TYPES.map(t=>`<button class="chip ${t===hrType?'on':''}" style="justify-content:flex-start;padding:11px 14px;font-size:13px" data-action="hrType" data-id="${t}">${t===hrType?'◉':'○'} ${t}</button>`).join('')}</div>
+   <div class="divider"></div>
+   <label class="field-lbl" for="hrInput">Describe the situation</label>
+   <textarea id="hrInput" rows="4">I need to talk to an employee who regularly misses deadlines.</textarea>
+   <button class="btn" style="margin-top:12px" data-action="runHr">⚡ Prepare with AEIL</button>
+  </div>
+  <div class="card" style="border-color:rgba(34,211,238,.3)"><h3>What AI should NOT infer</h3>
+   ${['AI does not diagnose mental health.','AI does not infer protected personal characteristics.','AI does not make employment decisions.','Emotional signals are probabilistic and contextual.'].map(x=>`<div style="display:flex;gap:10px;padding:8px 0;font-size:13px;border-bottom:1px dashed rgba(148,163,184,.1)"><span style="color:var(--acc2)">⊘</span>${x}</div>`).join('')}
+  </div>
+ </div>
+ <div id="hrResult"><div class="card" style="text-align:center;color:var(--dim);padding:60px 20px">Pick a conversation type and start preparation.<br>The “Difficult Conversation” section is shown by default.</div></div>
+</div>`;
+function runHr(){$('#hrResult').innerHTML=`
+ <div class="res-block" style="--rb:var(--info)"><h5>Facts <span class="tag fact">Fact</span></h5><p>Three overdue tasks in the last 3 weeks. Deadlines shifted without prior notice.</p></div>
+ <div class="res-block" style="--rb:#a78bfa"><h5>Possible Causes <span class="tag hyp">Hypothesis</span></h5>
+  ${barRow('Workload',54,'#fbbf24')}${barRow('Requirement ambiguity',31,'#a78bfa')}${barRow('Other',15,'#5c6a84')}</div>
+ <div class="res-block" style="--rb:var(--warn)"><h5>Conversation Strategy</h5><p>Do not start with an accusation. First — facts and open questions about causes. Talk about behavior and process, not personality.</p></div>
+ <div class="res-block" style="--rb:var(--ok)"><h5>Suggested Opening</h5><p style="font-style:italic;color:#d5dcef">“I noticed the last three tasks were delivered late, and I want to understand what’s going on. Please share how you see the situation — maybe it’s about workload or how the tasks are defined.”</p></div>
+ <div class="res-block" style="--rb:var(--acc2)"><h5>Questions</h5><p>• What is currently getting in the way of closing tasks on time?<br>• Which tasks or requirements feel unclear?<br>• What can I change on my side?<br>• How would you rate your current workload from 1 to 10?</p></div>
+ <div class="res-block" style="--rb:var(--bad)"><h5>Avoid</h5><p>✕ “You always miss deadlines” — generalization and accusation.<br>✕ “Others manage fine” — comparison increases defensiveness.<br>✕ “If this happens again, there will be consequences” — a threat at the start of the talk.<br>✕ Diagnoses and personality judgments.</p></div>
+ <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:6px">${confPill(71,['High confidence in the fact of overdue tasks.','Medium confidence in the cause (workload 54%).','The employee’s personal circumstances are unknown and are not evaluated.'])} ${whyBtn({ev:['3 overdue tasks','Deadlines shifted without notice'],ctx:'Sprints with elevated load',inf:'Workload is the most likely cause (54%)',risk:'Without clarification: growing frustration and conflict',alt:'Alternative “immediately issue a formal warning” — escalates'})}</div>
+ <p class="note" style="margin-top:12px">🔒 The final decision on any employment action is made only by a human. AEIL merely helps prepare.</p>`;
+ toast('AEIL HR: conversation plan prepared · Privacy Protected');}
+
+/* ---------- CUSTOMER SUCCESS ---------- */
+let csCustomer=0;
+VIEWS.cs=()=>`
+<div class="page-head"><h1>AI Customer Success Manager</h1>
+<p>Analyzes customer communication and detects: satisfaction changes, declining engagement, irritation, doubt, churn risk and potential causes of dissatisfaction.</p></div>
+<div class="grid cs-layout">
+ <div class="card" style="height:fit-content"><h3>Accounts · 10 · demo</h3>
+  <div style="display:flex;flex-direction:column;gap:7px">${CS_CUSTOMERS.map((c,i)=>`
+   <div class="ticket ${i===csCustomer?'on':''}" data-action="csPick" data-id="${i}">
+    <div><b style="font-size:13px">${c.n}</b><div class="tk-id">Satisfaction ${c.s} · Churn ${c.churn}%</div></div>
+    <span class="lvl-badge" style="background:${c.st==='healthy'?'rgba(52,211,153,.13)':c.st==='watch'?'rgba(251,191,36,.13)':'rgba(251,113,133,.15)'};color:${c.st==='healthy'?'var(--ok)':c.st==='watch'?'var(--warn)':'var(--bad)'}">${c.st}</span>
+   </div>`).join('')}</div>
+ </div>
+ <div>
+  <div class="card" style="margin-bottom:16px"><h3>Customer Health · ${CS_CUSTOMERS[csCustomer].n}</h3>
+   <div class="grid cs-health">
+    ${[['Satisfaction',CS_CUSTOMERS[csCustomer].s,'↓'],['Engagement',49,'↓'],['Frustration',72,'↑'],['Trust',61,'↓'],['Churn Risk',CS_CUSTOMERS[csCustomer].churn,'↑']].map(m=>`
+    <div class="metric-card" style="--mc:${m[2]==='↑'?(m[0]==='Churn Risk'?'var(--bad)':'var(--warn)'):'var(--info)'}">
+     <div class="mc-label">${m[0]}</div><div class="mc-val">${m[1]}<span class="mc-trend ${m[2]==='↑'?'up':'down'}">${m[2]}</span></div>
+     <div class="spark"><i style="width:${m[1]}%;background:currentColor"></i></div></div>`).join('')}</div>
+  </div>
+  <div class="grid g2" style="margin-bottom:16px">
+   <div class="card"><h3>Customer Timeline</h3>
+    <div class="vtl">${CS_TIMELINE.map(t=>`<div class="vtl-item" style="--vc:${t[3]}"><div class="vt-day">${t[0]}</div><div class="vt-txt">${t[1]}</div><div class="vt-sub">${t[2]}</div></div>`).join('')}</div>
+   </div>
+   <div class="card"><h3>Customer Emotional Journey</h3><div class="chart-box"><canvas id="csChart" aria-label="Customer emotional journey chart"></canvas></div></div>
+  </div>
+  <div class="card"><h3>AI Recommendation <span class="tag hyp" style="margin-left:8px">Hypothesis</span></h3>
+   <p style="font-size:14px;line-height:1.65;margin-bottom:14px">The client has not directly stated an intention to leave, but over the past two weeks there has been declining engagement, rising irritation and reduced communication.</p>
+   <div class="res-block" style="--rb:#a78bfa"><h5>Likely issue</h5><p>Unresolved product expectations — the export feature request never received a clear answer (hypothesis).</p></div>
+   <div class="res-block" style="--rb:var(--ok)"><h5>Recommended action</h5><p>Hold a personal review call: status of expectations, a plan for the feature, concrete dates.</p></div>
+   <div class="res-block" style="--rb:var(--bad)"><h5>Avoid</h5><p>Sending a standard marketing offer — it reinforces the feeling that the client is “not being heard”.</p></div>
+   <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px">${confPill(73,['High confidence in the communication pattern change.','Medium confidence in the cause (unresolved expectations).','Intent to leave is not confirmed — this is a forecast, not a fact.'])} ${whyBtn({ev:['Client response time grew 6×','Product activity −31%','Irritation in emails since Day 11'],ctx:'Feature request (Day 5) left without an answer; support delay (Day 8)',inf:'Unresolved product expectations (hypothesis)',risk:'Churn Risk 67% if nothing is done',alt:'Alternative “discount instead of a conversation” — does not remove the cause'})}</div>
+  </div>
+ </div>
+</div>`;
+function drawCs(){makeChart('csChart',{type:'line',data:{labels:CS_JOURNEY.labels,datasets:[ds('Satisfaction',CS_JOURNEY.Satisfaction,'#34d399'),ds('Engagement',CS_JOURNEY.Engagement,'#60a5fa'),ds('Frustration',CS_JOURNEY.Frustration,'#fb7185'),ds('Trust',CS_JOURNEY.Trust,'#a78bfa')]},options:lineOpts()});}
+
+/* ---------- SALES ---------- */
+let salesChoice=null;
+VIEWS.sales=()=>`
+<div class="page-head"><h1>AI Sales Manager</h1>
+<p>Analyzes negotiations and helps the seller understand deal dynamics. These are <b>behavioral and conversational signals</b> — observed signals, not “mind reading”. Demo deals: ${SALES_DEALS.map(d=>d[0]).join(' · ')}.</p></div>
+<div class="card" style="margin-bottom:16px"><h3>Deal Signals · Sfera Bank — Pilot</h3>
+ <div class="grid g2">
+  <div>${barRow('Buying Interest',66,'#34d399')}${barRow('Trust',48,'#60a5fa')}${barRow('Engagement',61,'#a78bfa')}</div>
+  <div>${barRow('Objection Pressure',63,'#fbbf24')}${barRow('Frustration',54,'#fb7185')}${barRow('Decision Confidence',44,'#22d3ee')}${barRow('Deal Risk',58,'#fb7185')}</div>
+ </div></div>
+<div class="grid g2" style="margin-bottom:16px">
+ <div class="card"><h3>Sales Conversation Analyzer</h3>
+  ${SALES_DIALOGUE.map(d=>`<div class="msg ${d[0]==='Client'?'client':'ai'}"><div class="who" style="color:${d[0]==='Client'?'var(--warn)':'var(--acc2)'}">${d[0].toUpperCase()}</div><div class="bubble">${d[1]}</div></div>`).join('')}
+  <div class="divider"></div>
+  <div class="field-lbl">AEIL · signals in dynamics</div>
+  <div class="sig-grid">
+   <span class="sig">Trust <b style="color:var(--bad)">↓</b></span><span class="sig">Frustration <b style="color:var(--bad)">↑</b></span>
+   <span class="sig">Urgency <b style="color:var(--warn)">↑</b></span><span class="sig">Skepticism <b style="color:var(--bad)">↑</b></span>
+   <span class="sig">Deal Risk <b style="color:var(--bad)">↑</b></span></div>
+  <div class="res-block" style="--rb:#a78bfa;margin-top:14px"><h5>Hypothesis <span class="tag hyp">Hypothesis, not fact</span></h5>
+  <p>The main risk is tied not to price, but to trust in timeline promises. The phrase “we were promised this before” points to prior negative experience.</p></div>
+ </div>
+ <div class="card"><h3>Sales Scenario Simulator · what to answer next?</h3>
+  <div style="display:flex;gap:9px;margin-bottom:14px">
+   <button class="chip ${salesChoice==='A'?'on':''}" data-action="salesPick" data-id="A">Response A</button>
+   <button class="chip ${salesChoice==='B'?'on':''}" data-action="salesPick" data-id="B">Response B</button>
+  </div>
+  <div class="res-block" style="--rb:${salesChoice==='B'?'var(--ok)':'var(--warn)'}">
+   <p style="font-style:italic">${salesChoice==='B'?'“Let’s figure out which deadline is critical for you and which features can move to phase two.”':salesChoice==='A'?'“We guarantee we will make it in time.”':'Choose a response option to see the AEIL forecast.'}</p></div>
+  <div id="salesForecast">${salesForecastHtml()}</div>
+ </div>
+</div>`;
+function salesForecastHtml(){
+ if(!salesChoice)return '<p class="note" style="text-align:center;padding:18px 0">AEIL will compare forecasts for both responses.</p>';
+ const B=salesChoice==='B';
+ const x=B?{trust:'+24',risk:43,frus:'−12',acc:71}:{trust:'+8 (short-term)',risk:64,frus:'+6',acc:38};
+ return `<div class="field-lbl">AEIL Forecast <span class="tag hyp">Forecast</span></div>
+ ${barRow('Trust Impact',B?78:34,B?'#34d399':'#fbbf24',x.trust)}
+ ${barRow('Deal Risk',x.risk,x.risk>50?'#fb7185':'#34d399')}
+ ${barRow('Frustration',B?32:56,B?'#34d399':'#fb7185',x.frus)}
+ ${barRow('Acceptance Probability',x.acc,B?'#34d399':'#fbbf24')}
+ <div class="res-block" style="--rb:${B?'var(--ok)':'var(--bad)'};margin-top:12px">
+  <p>${B?'✔ Response B restores trust: the seller makes no new promises, splits responsibility and uncovers the client’s real interest. AEIL recommends this option.':'✕ Response A repeats the “we promise” pattern that already triggered skepticism. A new vague promise raises Deal Risk. AEIL recommends Response B.'}</p></div>`;}
+
+/* ---------- SUPPORT ---------- */
+let supportTicket=0,supportTone='De-escalating';
+VIEWS.support=()=>`
+<div class="page-head"><h1>AI Support Manager</h1>
+<p>Analyzes customer tickets, determines the emotional escalation level and generates a response based on the client’s state, history and the chosen strategy. Demo base: ${SUPPORT_TICKETS.length} tickets.</p></div>
+<div class="grid support-layout">
+ <div class="card" style="height:fit-content;max-height:560px;overflow-y:auto"><h3>Tickets · ${SUPPORT_TICKETS.length}</h3>
+  <div style="display:flex;flex-direction:column;gap:8px">${SUPPORT_TICKETS.map((t,i)=>`
+   <div class="ticket ${i===supportTicket?'on':''}" data-action="ticketPick" data-id="${i}">
+    <div style="min-width:0"><div class="tk-id">${t.id} · ${t.client}</div><p style="overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">${esc(t.txt)}</p></div>
+    <span class="lvl-badge" style="background:${LVL_META[t.lvl].c}22;color:${LVL_META[t.lvl].c}">L${t.lvl}</span>
+   </div>`).join('')}</div>
+ </div>
+ <div>
+  <div class="card" style="margin-bottom:16px" id="supportAnalysis"></div>
+  <div class="card" style="margin-bottom:16px"><h3>Support Escalation Engine · levels</h3>
+   <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(190px,1fr))">${[1,2,3,4].map(l=>`
+    <div class="lvl-card" id="lvl-${l}" style="--lc:${LVL_META[l].c}"><div class="lv">${LVL_META[l].t}</div><p>${LVL_META[l].s}</p></div>`).join('')}</div>
+  </div>
+  <div class="card"><h3>Support Response Generator</h3>
+   <div class="field-lbl">Tone</div>
+   <div class="seg" style="margin-bottom:14px">${Object.keys(TONE_RESPONSES).map(t=>`<button class="${t===supportTone?'on':''}" data-action="tonePick" data-id="${t}">${t}</button>`).join('')}</div>
+   <button class="btn" data-action="genResponse">✦ Generate Response</button>
+   <div id="supportResp" style="margin-top:14px"></div>
+  </div>
+ </div>
+</div>`;
+function supportAnalysisHtml(){
+ const t=SUPPORT_TICKETS[supportTicket];
+ return `<h3>Emotional Analysis · ${t.id} · ${t.client}</h3>
+ <div class="res-block" style="--rb:var(--info)"><h5>Ticket <span class="tag fact">Fact</span></h5><p style="font-style:italic">“${esc(t.txt)}”</p>
+ ${t.lvl>=3?'<p class="note" style="margin-top:8px;color:var(--warn)">Repeated contact: previous attempts did not solve the problem (client history taken into account).</p>':''}</div>
+ <div class="res-block" style="--rb:var(--bad)"><h5>Signals <span class="tag interp">Interpretation</span></h5>${[['Frustration',t.f],['Anger',t.a],['Escalation Risk',t.esc]].map(s=>barRow(s[0],Math.round(s[1]*100),s[1]>.7?'#fb7185':s[1]>.4?'#fbbf24':'#34d399',s[1].toFixed(2))).join('')}</div>
+ <div class="res-block" style="--rb:${LVL_META[t.lvl].c}"><h5>Escalation Level</h5><p style="font-size:17px;font-weight:800;color:${LVL_META[t.lvl].c}">${LVL_META[t.lvl].t}</p><p>${LVL_META[t.lvl].s}</p></div>`;}
+function refreshSupport(){$('#supportAnalysis').innerHTML=supportAnalysisHtml();
+ $$('.lvl-card').forEach(e=>e.classList.remove('on'));
+ const el=document.getElementById('lvl-'+SUPPORT_TICKETS[supportTicket].lvl);if(el)el.classList.add('on');
+ const r=document.getElementById('supportResp');if(r)r.innerHTML='';}
+function genResponse(){
+ const t=SUPPORT_TICKETS[supportTicket];
+ const respBox=$('#supportResp');if(!respBox)return;
+ respBox.innerHTML='<div class="res-block" style="--rb:var(--acc2)"><p class="mono" style="font-size:12px;color:var(--acc2)">AEIL is generating a response · considering: emotional state · client history · root cause · previous failed contacts · strategy “'+supportTone+'”…</p></div>';
+ setTimeout(()=>{const box=document.getElementById('supportResp');if(!box)return;
+  box.innerHTML=`
+  <div class="res-block" style="--rb:var(--ok)"><h5>Generated Response · Tone: ${supportTone} <span class="tag action">Draft for a human</span></h5>
+  <p style="font-size:13.5px;line-height:1.7">${esc(TONE_RESPONSES[supportTone])}</p></div>
+  <div style="display:flex;gap:16px;flex-wrap:wrap">${confPill(Math.round(70+t.esc*15),['High confidence in the escalation level.','Medium confidence in tone selection.','The response is sent only after operator approval.'])} ${whyBtn({ev:['Frustration '+t.f,'Anger '+t.a,'Repeated contact'],ctx:'Client history: '+t.client,inf:'Level L'+t.lvl+' strategy is optimal (estimate)',risk:'A template reply would increase escalation',alt:'Alternative “standard script” rejected'})}</div>`;},SETTINGS.animations?900:60);}
+
+/* ---------- NEGOTIATION ---------- */
+let negScenario=0,negDeesc=false;
+function deescHtml(s){const o=s.opts;
+ const opts=[['Option A','Clarify interests','Clarify each side’s real interests with questions before bargaining over positions.',o.a],
+  ['Option B','Reframe disagreement','Reframe the disagreement as a shared task: “how do we satisfy both sides’ constraints”.',o.b],
+  ['Option C','Introduce conditional compromise','Conditional compromise: a concession in exchange for a counter-commitment with clear terms.',o.c]];
+ return `<div class="grid g3">${opts.map(x=>`
+  <div class="card" style="background:var(--panel2)"><b style="color:var(--acc2);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1.5px">${x[0].toUpperCase()}</b>
+  <h4 style="margin:7px 0 6px;font-size:14.5px">${x[1]}</h4><p style="font-size:12.5px;color:var(--mut);line-height:1.55;margin-bottom:12px">${x[2]}</p>
+  ${barRow('Conflict Risk',x[3].cr,x[3].cr>40?'#fbbf24':'#34d399')}
+  ${barRow('Acceptance Probability',x[3].ap,'#60a5fa')}
+  ${barRow('Relationship Impact',x[3].ri.includes('very')?88:x[3].ri.includes('high')?74:58,'#a78bfa',x[3].ri)}</div>`).join('')}</div>
+ <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:12px">${confPill(69,['High confidence in the conflict structure.','Medium confidence in the parties’ interests — these are hypotheses.','Acceptance forecasts are probabilistic; validate them in dialogue.'])} ${whyBtn({ev:['Positions diverge; constraints are documented'],ctx:'Both sides are bound by external commitments',inf:'Interests are more compatible than positions (hypothesis)',risk:'Positional bargaining escalates the conflict',alt:'Pressure option rejected: it destroys the relationship'})}</div>`;}
+VIEWS.neg=()=>{const s=NEG_SCENARIOS[negScenario];
+ return `
+<div class="page-head"><h1>AI Negotiation Assistant</h1>
+<p>Analyzes participants, positions, interests, constraints, emotions, triggers, power dynamics and conflict risk. Golden rule: <b>Position ≠ interest</b>. All conclusions about interests are hypotheses that must be validated in dialogue.</p></div>
+<div style="display:flex;gap:9px;margin-bottom:16px;flex-wrap:wrap;align-items:center"><span class="field-lbl" style="margin:0 4px 0 0">Negotiation scenario:</span>
+ ${NEG_SCENARIOS.map((n,i)=>`<button class="chip ${i===negScenario?'on':''}" data-action="negPick" data-id="${i}">${n.lbl}</button>`).join('')}</div>
+<div class="card" style="margin-bottom:16px"><h3>Negotiation Map</h3>
+ <div style="text-align:center;margin-bottom:14px"><span class="zone-chip info mono" style="letter-spacing:3px">NEGOTIATION</span></div>
+ <div class="negmap">
+  ${['A','B'].map(side=>`<div class="neg-col" style="border-color:${side==='A'?'rgba(96,165,250,.3)':'rgba(251,191,36,.3)'}">
+   <h4 style="color:${side==='A'?'var(--info)':'var(--warn)'}">${s[side].name}</h4>
+   <div class="neg-row"><span class="k">Position</span><span>${s[side].pos}</span></div>
+   <div class="neg-row"><span class="k">Interest</span><span>${s[side].int} <span class="tag hyp">Hypothesis</span></span></div>
+   <div class="neg-row"><span class="k">Concern</span><span>${s[side].con}</span></div>
+   <div class="neg-row"><span class="k">Emotion</span><span>${s[side].emo}</span></div>
+   <div class="neg-row"><span class="k">Constraint</span><span>${s[side].lim}</span></div>
+  </div>`).join('')}
+ </div>
+ <div class="neg-center"><div class="arrow-down" style="font-size:20px">↓ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ↓</div>
+  <span class="zone-chip">⚡ Conflict Zone</span><p style="color:var(--mut);font-size:13px;margin-top:9px">${s.conflict}</p>
+  <div class="arrow-down" style="font-size:20px">↓</div><span class="zone-chip ok">✦ Common Interests</span>
+  <div style="margin-top:9px">${s.common.map(c=>'<span class="chip" style="margin:3px;cursor:default">'+c+'</span>').join('')}</div>
+  <div class="arrow-down" style="font-size:20px">↓</div><span class="zone-chip info">◈ Possible Solutions</span>
+  <div style="margin-top:9px">${s.sol.map(c=>'<span class="chip" style="margin:3px;cursor:default;border-color:rgba(96,165,250,.35)">'+c+'</span>').join('')}</div>
+ </div>
+</div>
+<div class="card"><div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:14px">
+  <h3 style="margin:0">De-escalation Strategy</h3><button class="btn" data-action="deesc">⚡ Find De-escalation Strategy</button></div>
+ <div id="deescBox">${negDeesc?deescHtml(s):'<p class="note" style="text-align:center;padding:14px">AEIL will propose 3 de-escalation options with risk forecasts.</p>'}</div>
+</div>`;};
+
+/* ---------- EDUCATION ---------- */
+let eduLearner=0;
+VIEWS.edu=()=>`
+<div class="page-head"><h1>AI Education Manager</h1>
+<p>Analyzes learner engagement and behavior changes. No labels: instead of “the student is lazy” — observed changes relative to their own baseline activity. Demo group: ${EDU_LEARNERS.length} learners.</p></div>
+<div class="grid edu-layout">
+ <div class="card" style="height:fit-content"><h3>Learners · ${EDU_LEARNERS.length}</h3>
+  <div style="display:flex;flex-direction:column;gap:7px">${EDU_LEARNERS.map((l,i)=>`
+   <div class="ticket ${i===eduLearner?'on':''}" data-action="eduPick" data-id="${i}">
+    <div><b style="font-size:13px">${l.n}</b><div class="tk-id">${l.c} · engagement ${l.eng}</div></div>
+    <span class="lvl-badge" style="background:${l.st==='ok'?'rgba(52,211,153,.13)':l.st==='watch'?'rgba(251,191,36,.13)':'rgba(251,113,133,.15)'};color:${l.st==='ok'?'var(--ok)':l.st==='watch'?'var(--warn)':'var(--bad)'}">${l.delta>0?'+':''}${l.delta}%</span>
+   </div>`).join('')}</div>
+ </div>
+ <div>
+  <div class="card" style="margin-bottom:16px"><h3>Learner Signals · Maria O. · Data Analytics</h3>
+   <div class="grid g4">${[['Engagement',54],['Participation',48],['Persistence',58],['Response Delay',71],['Task Completion',62],['Frustration Signals',66],['Confidence Signals',43],['Learning Momentum',39]].map(m=>`
+    <div class="metric-card" style="--mc:${m[1]<45?'var(--bad)':m[1]<60?'var(--warn)':'var(--ok)'}"><div class="mc-label">${m[0]}</div><div class="mc-val">${m[1]}</div><div class="spark"><i style="width:${m[1]}%;background:currentColor"></i></div></div>`).join('')}</div>
+  </div>
+  <div class="grid g2" style="margin-bottom:16px">
+   <div class="card"><h3>Education Timeline</h3>
+    <div class="vtl">${EDU_TIMELINE.map(t=>`<div class="vtl-item" style="--vc:${t[3]}"><div class="vt-day">${t[0]}</div><div class="vt-txt">${t[1]}</div><div class="vt-sub">${t[2]}</div></div>`).join('')}</div>
+   </div>
+   <div class="card"><h3>Activity vs Baseline</h3><div class="chart-box" style="height:230px"><canvas id="eduChart" aria-label="Learner activity chart"></canvas></div>
+    <p class="note" style="margin-top:10px">The learner’s activity has dropped by <b style="color:var(--bad)">37%</b> compared to her baseline activity — an observation relative to her own level, not a comparison with others.</p></div>
+  </div>
+  <div class="card"><h3>AI Analysis</h3>
+   <div class="res-block" style="--rb:#a78bfa"><h5>Observation <span class="tag hyp">Possible</span></h5><p>Possible engagement decline. Possible causes: increased difficulty, a change in learning pace or a lack of feedback. Confidence: 68%.</p></div>
+   <div class="res-block" style="--rb:var(--ok)"><h5>Recommended Support <span class="tag action">Instead of judgment</span></h5>
+    <p>• Reduce the difficulty of the next assignment.<br>• Provide extra feedback on recent work.<br>• Verify understanding of the previous material.<br>• Offer an alternative format of explanation.</p></div>
+   <div style="display:flex;gap:16px;flex-wrap:wrap">${confPill(68,['High confidence in the activity change relative to baseline.','Medium confidence in the cause.','External learning circumstances are unknown.'])} ${whyBtn({ev:['−37% activity vs baseline','Task delays since week 3','Growing response time'],ctx:'Program difficulty increased in week 3',inf:'Difficulty / feedback are likely causes (hypothesis)',risk:'Learner dropout without support',alt:'Labels are never used — only observed changes'})}</div>
+  </div>
+ </div>
+</div>`;
+function drawEdu(){makeChart('eduChart',{type:'line',data:{labels:['W1','W2','W3','W4','W5'],datasets:[ds('Baseline activity',[85,85,86,85,85],'#34d399',[6,5]),ds('Maria’s activity',[86,82,71,61,54],'#fb7185')]},options:lineOpts()});}
+
+/* ---------- SIMULATOR ---------- */
+let simScenario=0,simIntensity='Medium',simRunning=false;
+VIEWS.simulator=()=>`
+<div class="page-head"><h1>AEIL Simulator</h1>
+<p>Dynamic situation modeling: the system shows how a scenario develops day by day, where risk emerges and how AEIL-based intervention changes the trajectory.</p></div>
+<div class="card" style="margin-bottom:16px">
+ <div class="grid" style="grid-template-columns:1fr auto auto;align-items:end">
+  <div><label class="field-lbl" for="simSel">Scenario</label>
+   <select id="simSel">${SIM_SCENARIOS.map((s,i)=>`<option value="${i}" ${i===simScenario?'selected':''}>${s.lbl}</option>`).join('')}</select></div>
+  <div><label class="field-lbl">Intensity</label>
+   <div class="seg">${['Low','Medium','High'].map(v=>`<button class="${v===simIntensity?'on':''}" data-action="simInt" data-id="${v}">${v}</button>`).join('')}</div></div>
+  <button class="btn" data-action="runSim">▶ Run Simulation</button>
+ </div>
+</div>
+<div class="card" style="margin-bottom:16px"><h3>Simulation Timeline · 8 days</h3>
+ <div class="grid sim-days">${Array.from({length:8},(_,i)=>`
+  <div class="day-cell" id="day-${i}"><div class="d-day">DAY ${i+1}</div><div class="d-ico" id="day-ico-${i}">·</div><div class="d-txt" id="day-txt-${i}">${SIM_SCENARIOS[simScenario].ev[i]}</div></div>`).join('')}</div>
+</div>
+<div class="grid g2">
+ <div class="card"><h3>Risk Dynamics</h3><div class="chart-box" style="height:240px"><canvas id="simChart" aria-label="Risk dynamics chart"></canvas></div></div>
+ <div class="card" id="simSummary"><h3>Summary</h3><p class="note" style="padding:20px 0;text-align:center">Run the simulation to see how the situation develops and where AEIL intervenes.</p></div>
+</div>`;
+const SIM_ICONS=['◯','📈','🔥','💬','⚠','▲','⚡','✔'];
+function runSimulation(){
+ if(simRunning)return;simRunning=true;
+ const sc=SIM_SCENARIOS[simScenario],k=SIM_INTERP[simIntensity];
+ const data=sc.base.map((v,i)=>Math.min(96,Math.round(v*k*(i===7?.92:1))));
+ $$('.day-cell').forEach(e=>e.classList.remove('on'));
+ const colors=['#34d399','#fbbf24','#fb7185','#fb7185','#fb7185','#f43f5e','#7c5cff','#34d399'];
+ const prog=[];
+ for(let d=0;d<8;d++){setTimeout(()=>{
+   if(currentView!=='simulator'){simRunning=false;return;} /* view unmounted — abort */
+   const cell=document.getElementById('day-'+d);
+   if(cell){cell.classList.add('on');cell.style.setProperty('--dc',colors[d]);
+    document.getElementById('day-ico-'+d).textContent=SIM_ICONS[d];
+    document.getElementById('day-txt-'+d).textContent=sc.ev[d];}
+   prog.push(data[d]);
+   makeChart('simChart',{type:'line',data:{labels:Array.from({length:prog.length},(_,i)=>'DAY '+(i+1)),
+    datasets:[{label:'Risk Level',data:[...prog],borderColor:'#7c5cff',backgroundColor:'rgba(124,92,255,.15)',fill:true,tension:.35,borderWidth:2.5,pointRadius:4,pointBackgroundColor:colors.slice(0,prog.length)}]},
+    options:lineOpts({plugins:{legend:{display:false}}})});
+   if(d===7){const sum=document.getElementById('simSummary');if(!sum){simRunning=false;return;}
+    sum.innerHTML=`<h3>Summary · ${sc.lbl} · ${simIntensity}</h3>
+     <div class="res-block" style="--rb:var(--bad)"><p>Peak risk — <b class="mono" style="color:var(--bad)">${data[5]}/100</b> on DAY 6. Signals were visible as early as DAY 2–3, but without an AEIL layer they are usually never connected into a single picture.</p></div>
+     <div class="res-block" style="--rb:var(--ok)"><p>AEIL intervention on DAY 7 (recommendation + human decision) brings risk down to <b class="mono" style="color:var(--ok)">${data[7]}/100</b> by DAY 8.</p></div>
+     <div class="split-card" style="border-radius:12px;font-size:12.5px">
+      <div class="wo" style="padding:15px"><b style="color:var(--bad)">WITHOUT AEIL</b><p style="color:var(--mut);margin-top:7px;line-height:1.55">Reaction only to the fact of conflict / churn. Time lost at the risk peak.</p></div>
+      <div class="vs">VS</div>
+      <div class="wi" style="padding:15px"><b style="color:var(--ok)">WITH AEIL</b><p style="color:var(--mut);margin-top:7px;line-height:1.55">Early signals → forecast → intervention 2 days before the peak.</p></div>
+     </div>`;
+    simRunning=false;toast('Simulation complete: intervention reduced risk by '+(data[5]-data[7])+' points');}
+  },SETTINGS.animations?d*520:d*40);}
+}
+
+/* ---------- BEFORE / AFTER ---------- */
+let baCase=0;
+VIEWS.beforeafter=()=>`
+<div class="page-head"><h1>Before / After AEIL</h1>
+<p>The flagship marketing screen: the same situation through the eyes of a regular AI and an AI with an emotional layer. Compare the depth of analysis and the recommendations.</p></div>
+<div style="display:flex;gap:9px;flex-wrap:wrap;margin-bottom:18px">${BA_CASES.map((c,i)=>`<button class="chip ${i===baCase?'on':''}" data-action="baPick" data-id="${i}">${c.lbl}</button>`).join('')}</div>
+<div class="split-card" style="margin-bottom:20px">
+ <div class="wo"><span class="tag interp">WITHOUT AEIL</span>
+  <h4 style="margin:12px 0 9px">${BA_CASES[baCase].wo}</h4>
+  <p style="color:var(--mut);font-size:13px;line-height:1.6">Standard AI: ${BA_CASES[baCase].woAct}</p></div>
+ <div class="vs">VS</div>
+ <div class="wi"><span class="tag action">WITH AEIL</span>
+  <h4 style="margin:12px 0 9px">${BA_CASES[baCase].wi}</h4>
+  <p style="color:var(--mut);font-size:13px;line-height:1.6">AEIL AI: ${BA_CASES[baCase].wiAct}</p></div>
+</div>
+<div class="card" style="margin-bottom:16px"><h3>AI Recommendation Comparison</h3>
+ <div class="grid g2">
+  <div><div class="field-lbl" style="color:var(--bad)">Standard AI</div><div class="res-block" style="--rb:var(--bad)"><p>${BA_CASES[baCase].woAct}</p></div></div>
+  <div><div class="field-lbl" style="color:var(--ok)">AEIL AI</div><div class="res-block" style="--rb:var(--ok)"><p>${BA_CASES[baCase].wiAct}</p></div></div>
+ </div>
+ <div class="res-block" style="--rb:var(--acc2)"><h5>Outcome in the demo scenario</h5><p>${BA_CASES[baCase].out}</p></div>
+</div>
+<div class="quote">The user grasps the idea in 30 seconds: a regular AI processes information. AEIL adds human context — and the action becomes more appropriate.</div>`;
+
+/* ---------- METHODOLOGY ---------- */
+VIEWS.methodology=()=>`
+<div class="page-head"><h1>AEIL Methodology</h1>
+<p>One methodology — seven applications. The universal pipeline, the data model, product coverage and the licensing concept.</p></div>
+<div class="card" style="margin-bottom:16px"><h3>Universal AEIL Pipeline · 14 stages</h3>
+ <div class="flow-chips">${['INPUT','Context','Observation','Emotion Signals','Behavior','Motivation / Intent','Relationship','Conflict','Risk','Prediction','Recommendation','Safety','Human Decision','Feedback'].map((s,i,a)=>`<span class="fc">${s}</span>${i<a.length-1?'<span class="fa">→</span>':''}`).join('')}</div>
+ <p class="note" style="margin-top:12px">Not every product uses every level — products pick their own combination.</p></div>
+<div class="grid g2" style="margin-bottom:16px">
+ <div class="card"><h3>Stage coverage by product</h3>
+  <div class="tbl-wrap"><table class="tbl"><tr><th>Product</th><th>Core chain</th></tr>
+  ${PRODUCTS.map(p=>`<tr><td><b style="color:${p.color}">${p.name}</b></td><td class="mono" style="font-size:11px">${p.pipe}</td></tr>`).join('')}</table></div></div>
+ <div class="card"><h3>Universal AEIL Data Object</h3>
+  <div class="code">{
+  <span class="k">"subject"</span>: {}, <span class="k">"context"</span>: {},
+  <span class="k">"observations"</span>: [], <span class="k">"emotional_signals"</span>: [],
+  <span class="k">"behavior_signals"</span>: [], <span class="k">"motivation_signals"</span>: [],
+  <span class="k">"relationship_signals"</span>: [], <span class="k">"possible_causes"</span>: [],
+  <span class="k">"risks"</span>: [], <span class="k">"predictions"</span>: [],
+  <span class="k">"recommendations"</span>: [], <span class="k">"confidence"</span>: <span class="s">0.0</span>,
+  <span class="k">"uncertainty"</span>: [], <span class="k">"safety_flags"</span>: []
+}</div>
+  <p class="note" style="margin-top:10px">Each applied product extends this object with its own fields.</p></div>
+</div>
+<div class="grid g2" style="margin-bottom:16px">
+ <div class="card"><h3>UX principle · user journey</h3>
+  ${['What happened?','Why?','What is the risk?','What should I do?'].map((s,i,a)=>`<div style="display:flex;align-items:center;gap:13px;padding:12px 4px;font-size:15px;font-weight:700"><span style="width:30px;height:30px;border-radius:9px;background:var(--grad);display:grid;place-items:center;font-size:13px">${i+1}</span>${s}</div>${i<a.length-1?'<div class="arrow-down">↓</div>':''}`).join('')}
+  <p class="note" style="margin-top:10px">Details open via the <b>Explain</b> button — the user never drowns in data.</p></div>
+ <div class="card"><h3>Licensing Concept · AEIL as a layer</h3>
+  <div style="text-align:center;margin:10px 0"><span class="zone-chip info">AEIL Core</span><div class="arrow-down">↓</div><span class="zone-chip info">API</span><div class="arrow-down">↓</div><span class="zone-chip info">External AI Products</span></div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px">${['SaaS','API','SDK','White Label','Enterprise Layer','Embedded AI Module'].map(m=>'<span class="chip" style="cursor:default">'+m+'</span>').join('')}</div>
+  <p class="note" style="margin-top:12px">The modular architecture allows any of the seven products to become a standalone commercial SaaS. Billing is not implemented in the MVP — the architecture allows adding it later. Interested in licensing? <button class="link-btn" data-action="feedback">Contact the developers</button></p></div>
+</div>
+<div class="quote">Positioning: <b>AEIL models emotional and behavioral context based on observed signals, context and interaction history.</b> The system forms probabilistic hypotheses rather than reading people’s minds.</div>`;
+
+/* ---------- SAFETY ---------- */
+VIEWS.safety=()=>`
+<div class="page-head"><h1>AEIL Safety Center</h1>
+<p>Safety and ethics are part of the methodology, not an add-on. Every conclusion passes a Safety Check before becoming a recommendation.</p></div>
+<div class="grid g3" style="margin-bottom:20px">
+ ${[['No mind reading','The AI never claims to know a person’s thoughts. All conclusions about internal states are probabilistic hypotheses.','🧠'],
+  ['No diagnosis','The AI does not make medical or psychological diagnoses. No clinical wording whatsoever.','🩺'],
+  ['No hidden profiling','The system does not build hidden personality profiles or infer protected characteristics.','🚫'],
+  ['No autonomous HR decisions','Employment decisions — hiring, firing, fines — are never made automatically.','⚖'],
+  ['No manipulation','A person’s emotions are never used for hidden pressure or manipulation.','🛡'],
+  ['Human oversight','Critical decisions are always made by a human. The AI proposes, explains and shows its confidence.','👤']].map(p=>`
+ <div class="card"><div style="font-size:24px;margin-bottom:10px">${p[2]}</div>
+  <h4 style="font-size:14.5px;margin-bottom:7px;color:var(--acc2)">${p[0]}</h4><p style="font-size:12.8px;color:var(--mut);line-height:1.6">${p[1]}</p></div>`).join('')}
+</div>
+<div class="grid g2">
+ <div class="card" style="border-color:rgba(34,211,238,.3)"><h3>What AI should NOT infer</h3>
+  ${['AI does not diagnose mental health.','AI does not infer protected personal characteristics.','AI does not make employment decisions.','Emotional signals are probabilistic and contextual.','AI does not claim to know a person’s thoughts.','AI does not label people (no “toxic”, no “lazy”).'].map(x=>`<div style="display:flex;gap:10px;padding:8px 0;font-size:13px;border-bottom:1px dashed rgba(148,163,184,.1)"><span style="color:var(--acc2)">⊘</span>${x}</div>`).join('')}</div>
+ <div class="card"><h3>Safety in the pipeline</h3>
+  <div class="flow-chips"><span class="fc">Recommendation</span><span class="fa">→</span><span class="fc" style="border-color:rgba(34,211,238,.5);color:var(--acc2)">SAFETY CHECK</span><span class="fa">→</span><span class="fc" style="border-color:rgba(52,211,153,.5);color:var(--ok)">HUMAN DECISION</span></div>
+  <div class="divider"></div>
+  <p style="font-size:13.5px;line-height:1.7;color:var(--mut)">Every recommendation is checked before display: no diagnosis, no profiling, no manipulation, no autonomous employment decisions. The user always sees <span class="tag hyp">Confidence</span> and <span class="tag safe">Uncertainty</span> — transparency is the mechanism of trust.</p>
+  <div class="divider"></div><span class="privacy-badge">🛡 Privacy Protected — across all seven products</span></div>
+</div>`;
+
+/* ================================================================
+   API / SETTINGS MODALS
+================================================================ */
+function openApiModal(){openModal(`<h3 style="font-size:17px;margin-bottom:6px">AEIL API · concept</h3>
+ <p class="note" style="margin-bottom:16px">In the future AEIL will be available beyond the interface — the core is licensed as API / SDK / Enterprise Layer. For API access requests use the <button class="link-btn" data-action="feedback">feedback form</button>.</p>
+ <div class="tbl-wrap"><table class="tbl"><tr><th>Endpoint</th><th>Purpose</th></tr>
+ ${[['/api/v1/analyze','Full AEIL pipeline for a text/event'],['/api/v1/emotion','Emotional signals only'],['/api/v1/risk','Risk assessment'],['/api/v1/recommend','Recommendation generation + confidence'],['/api/v1/conflict','Conflict and tension zone detection'],['/api/v1/simulation','Dynamic simulation run']].map(e=>`<tr><td><span class="method-badge">POST</span> <span class="mono" style="font-size:11px">${e[0]}</span></td><td style="color:var(--mut)">${e[1]}</td></tr>`).join('')}</table></div>
+ <div class="field-lbl" style="margin-top:16px">Example · POST /api/v1/analyze</div>
+ <div class="code"><span class="c">// request</span>
+{ <span class="k">"text"</span>: <span class="s">"I have redone this task three times already…"</span>,
+  <span class="k">"product"</span>: <span class="s">"team-manager"</span> }
+
+<span class="c">// response → Universal AEIL Data Object</span>
+{ <span class="k">"emotional_signals"</span>: [{<span class="k">"name"</span>:<span class="s">"Frustration"</span>,<span class="k">"value"</span>:<span class="s">0.78</span>}],
+  <span class="k">"risks"</span>: [{<span class="k">"name"</span>:<span class="s">"Conflict escalation"</span>,<span class="k">"value"</span>:<span class="s">0.68</span>}],
+  <span class="k">"recommendations"</span>: [<span class="s">"Lock down requirements…"</span>],
+  <span class="k">"confidence"</span>: <span class="s">0.76</span> }</div>
+ <p class="note" style="margin-top:12px">LLM abstraction: <b>LLMProvider</b> → OpenAIProvider | MockProvider. Without an API key the service automatically runs in DEMO SIMULATION.</p>`);}
+function openSettingsModal(){openModal(`<h3 style="font-size:17px;margin-bottom:16px">Settings</h3>
+ <div class="field-lbl">LLM Provider</div>
+ <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:6px">
+  <button class="chip ${SETTINGS.provider==='mock'?'on':''}" style="justify-content:flex-start;padding:11px 14px" data-action="setProvider" data-id="mock">◉ MockProvider — DEMO SIMULATION (works without a key)</button>
+  <button class="chip ${SETTINGS.provider==='openai'?'on':''}" style="justify-content:flex-start;padding:11px 14px" data-action="setProvider" data-id="openai">○ OpenAIProvider — LIVE AI (requires an API key)</button>
+ </div>
+ <input type="text" id="apiKeyInput" placeholder="OpenAI API key (not required for the demo)" value="${esc(SETTINGS.apiKey)}">
+ <div class="divider"></div>
+ <div class="field-lbl">Interface</div>
+ <button class="chip ${SETTINGS.animations?'on':''}" style="margin-bottom:8px" data-action="toggleAnim">${SETTINGS.animations?'✓':'✕'} Animations enabled</button><br>
+ <button class="btn small ghost" data-action="loadDemo">⭳ Load Demo Data (reload demo datasets)</button>
+ <div class="divider"></div>
+ <p class="note">Status: <b class="mono" style="color:var(--warn)">${AEIL.provider().name}</b>. If the LLM API is unavailable, the service does not break — it switches to prepared scenarios. All data is fictional: Team 6 · HR 5 · CS 10 · Sales 5 · Support 20 · Negotiation 3 · Education 10. Questions? <button class="link-btn" data-action="feedback">Contact the developers</button></p>`);}
+function setProvider(p){
+ if(p==='openai'&&!$('#apiKeyInput').value.trim()){toast('⚠ No API key found — the service stays in DEMO SIMULATION and does not break.');p='mock';}
+ SETTINGS.provider=p;if(p==='openai')SETTINGS.apiKey=$('#apiKeyInput').value.trim();
+ updateProviderPill();openSettingsModal();
+ toast(p==='openai'?'LLM Provider: LIVE AI (OpenAI)':'LLM Provider: DEMO SIMULATION (MockProvider)');}
+function updateProviderPill(){const live=SETTINGS.provider==='openai';$('#providerPill').classList.toggle('live',live);$('#providerTxt').textContent=live?'LIVE AI':'DEMO SIMULATION';}
+
+/* ================================================================
+   LIVE DEMO & PRESENTATION
+================================================================ */
+let liveTimer=null,liveIdx=0;
+function toggleLive(){
+ const f=$('#live-feed');
+ if(f.classList.contains('open')){f.classList.remove('open');clearInterval(liveTimer);liveTimer=null;$('#liveBtn').classList.remove('live-on');toast('Live Demo stopped');return;}
+ f.classList.add('open');$('#liveBody').innerHTML='';liveIdx=0;$('#liveBtn').classList.add('live-on');
+ toast('▶ Live Demo: scenario “Client requirement change” — auto-play with no user input');
+ liveTimer=setInterval(()=>{
+  if(liveIdx>=LIVE_SCRIPT.length){clearInterval(liveTimer);liveTimer=null;
+   const end=document.createElement('div');end.className='lf-ev';end.style.setProperty('--ec','#34d399');
+   end.innerHTML='<span class="t">END · '+new Date().toLocaleTimeString()+'</span>Scenario finished. AEIL detected the problem before escalation and proposed an action confirmed by a human.';
+   $('#liveBody').appendChild(end);$('#liveBody').scrollTop=1e5;return;}
+  const ev=LIVE_SCRIPT[liveIdx++];
+  const el=document.createElement('div');el.className='lf-ev';el.style.setProperty('--ec',ev.c);
+  el.innerHTML='<span class="t">'+ev.t+' · '+new Date().toLocaleTimeString()+'</span>'+ev.x;
+  $('#liveBody').appendChild(el);$('#liveBody').scrollTop=1e5;
+ },SETTINGS.animations?1700:300);}
+let presIdx=0;
+function openPres(){presIdx=0;$('#pres-overlay').classList.add('open');renderPres();}
+function renderPres(){const s=PRES_SLIDES[presIdx];
+ $('#pres-stage').textContent='STEP '+(presIdx+1)+' / '+PRES_SLIDES.length+' · '+s.stage;
+ $('#pres-content').innerHTML='<h2>'+s.h+'</h2>'+s.b;
+ $('#pres-dots').innerHTML=PRES_SLIDES.map((_,i)=>`<i class="${i===presIdx?'on':''}" data-action="presGoto" data-id="${i}"></i>`).join('');}
+function presNext(){if(presIdx<PRES_SLIDES.length-1){presIdx++;renderPres();}else toast('Demo complete ✓');}
+function presPrev(){if(presIdx>0){presIdx--;renderPres();}}
+function presExit(){$('#pres-overlay').classList.remove('open');}
+
+/* ================================================================
+   ROUTER & EVENTS
+================================================================ */
+let currentView='overview';
+const AFTER_RENDER={
+ team:()=>{teamStressRun=false;drawTeamChart(7);}, /* allow replaying the stress sim */
+ cs:()=>drawCs(),
+ edu:()=>drawEdu(),
+ support:()=>refreshSupport(),
+ simulator:()=>{simRunning=false;makeChart('simChart',{type:'line',data:{labels:[],datasets:[]},options:lineOpts({plugins:{legend:{display:false}}})});}};
+function navigate(id){
+ if(!VIEWS[id])id='overview';
+ currentView=id;
+ document.body.classList.remove('nav-open');
+ destroyCharts();
+ $$('.nav-item').forEach(n=>n.classList.toggle('active',n.dataset.nav===id));
+ $('#viewTitle').innerHTML='<small>AEIL /</small> '+(VIEW_TITLES[id]||id);
+ $('#content').innerHTML='<section class="view active">'+VIEWS[id]()+'</section>';
+ window.scrollTo({top:0});
+ if(AFTER_RENDER[id])AFTER_RENDER[id]();}
+document.addEventListener('click',e=>{
+ if(e.target.id==='modal-overlay'){closeModal();return;}
+ if(document.body.classList.contains('nav-open')&&!e.target.closest('#sidebar')&&!e.target.closest('#burger'))document.body.classList.remove('nav-open');
+ const nav=e.target.closest('[data-nav]');
+ if(nav){navigate(nav.dataset.nav);return;}
+ const act=e.target.closest('[data-action]');
+ if(!act)return;
+ const a=act.dataset.action,d=act.dataset.id;
+ switch(a){
+  case 'burger':document.body.classList.toggle('nav-open');break;
+  case 'modalClose':closeModal();break;
+  case 'feedback':openFeedback();break;
+  case 'fbSubmit':fbSubmit();break;
+  case 'loadDemo':toast('⭳ Demo data loaded: Team 6 · HR 5 · Customer Success 10 · Sales 5 · Support 20 · Negotiation 3 · Education 10 — all data is fictional');break;
+  case 'toggleLive':toggleLive();break;
+  case 'openPres':openPres();break;
+  case 'presNext':presNext();break;
+  case 'presPrev':presPrev();break;
+  case 'presGoto':presIdx=+d;renderPres();break;
+  case 'presExit':presExit();break;
+  case 'openApi':openApiModal();break;
+  case 'openSettings':openSettingsModal();break;
+  case 'setProvider':setProvider(d);break;
+  case 'toggleAnim':SETTINGS.animations=!SETTINGS.animations;document.body.classList.toggle('no-anim',!SETTINGS.animations);openSettingsModal();break;
+  case 'corePreset':corePreset(d);break;
+  case 'runCore':runCore();break;
+  case 'why':openWhy(store[d]);break;
+  case 'conf':openConf(store[d]);break;
+  case 'simTeam':simTeam();break;
+  case 'openMember':openMember(+d);break;
+  case 'teamRange':$$('#teamRange button').forEach(b=>b.classList.toggle('on',b.dataset.d===d));drawTeamChart(+d);break;
+  case 'hrType':hrType=d;$$('.chip[data-action="hrType"]').forEach(b=>{const on=b.dataset.id===hrType;b.classList.toggle('on',on);b.textContent=(on?'◉ ':'○ ')+b.dataset.id;});break;
+  case 'runHr':runHr();break;
+  case 'csPick':csCustomer=+d;navigate('cs');break;
+  case 'salesPick':salesChoice=d;navigate('sales');break;
+  case 'ticketPick':supportTicket=+d;$$('.ticket[data-action="ticketPick"]').forEach(t=>t.classList.toggle('on',+t.dataset.id===supportTicket));refreshSupport();break;
+  case 'tonePick':supportTone=d;$$('.seg button[data-action="tonePick"]').forEach(b=>b.classList.toggle('on',b.dataset.id===d));break;
+  case 'genResponse':genResponse();break;
+  case 'negPick':negScenario=+d;negDeesc=false;navigate('neg');break;
+  case 'deesc':negDeesc=true;$('#deescBox').innerHTML=deescHtml(NEG_SCENARIOS[negScenario]);toast('AEIL proposed 3 de-escalation options · validate interests in dialogue');break;
+  case 'eduPick':eduLearner=+d;navigate('edu');break;
+  case 'simInt':simIntensity=d;$$('.seg button[data-action="simInt"]').forEach(b=>b.classList.toggle('on',b.dataset.id===d));break;
+  case 'runSim':{const sel=$('#simSel');if(sel)simScenario=+sel.value;
+    if(currentView!=='simulator'){navigate('simulator');setTimeout(runSimulation,80);}else runSimulation();break;}
+  case 'baPick':baCase=+d;navigate('beforeafter');break;
+ }
+});
+document.addEventListener('change',e=>{if(e.target.id==='simSel'){simScenario=+e.target.value;navigate('simulator');}});
+document.addEventListener('keydown',e=>{
+ if($('#pres-overlay').classList.contains('open')){
+  if(e.key==='Escape')presExit();
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();presNext();}
+  if(e.key==='ArrowLeft')presPrev();
+ }else if(e.key==='Escape'){closeModal();document.body.classList.remove('nav-open');}
+});
+
+/* init */
+buildNav();
+navigate('overview');
+updateProviderPill();
+</script>
+</body>
+</html>
