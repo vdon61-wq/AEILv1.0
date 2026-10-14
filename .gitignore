@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Build and validation output
+build/
+dist/
+validation.json
+demo-results.json
+demo-report.json
+
+# Editors and OS
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Local audit working data - never commit real people's emotional or behavioural
+# data as benchmark evidence (SECURITY.md).
+audits/local/
+results/*.json
+!protocol/examples/*.json
