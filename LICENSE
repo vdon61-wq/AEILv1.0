@@ -1,0 +1,39 @@
+# AEIL — Licensing
+
+AEIL uses a multi-licence structure because the specification, benchmark, software, branding
+and certification programme have different legal and operational roles. The authoritative
+description is [`AEIL_v1.0_licenses/LICENSE.md`](AEIL_v1.0_licenses/LICENSE.md) and the
+file-by-file mapping is
+[`AEIL_v1.0_licenses/LICENSE-MAP.md`](AEIL_v1.0_licenses/LICENSE-MAP.md).
+
+| Material | Licence |
+|---|---|
+| Specification and prose documentation (`*.md`, `docs/`) | CC-BY-4.0 |
+| Public benchmark (`benchmark/`) | CC-BY-4.0 |
+| Code, JSON schemas and tooling (`tools/`, `protocol/`, `.github/`) | Apache-2.0 |
+| AEIL name, logos, certification marks | see `AEIL_v1.0_licenses/TRADEMARK.md` |
+| Demonstration platform (`demo/`) | **proprietary, all rights reserved** — not part of the open specification |
+
+SPDX-License-Identifier: CC-BY-4.0 OR Apache-2.0
+
+Full canonical licence texts: [`AEIL_v1.0_licenses/LICENSES/`](AEIL_v1.0_licenses/LICENSES/).
+
+## Why this file is at the root
+
+Until v1.1.0 the licence files lived only under `AEIL_v1.0_licenses/`, so GitHub reported
+`license: null` for the repository and an adopter cloning it received no machine-readable
+grant. This file exists so the licence is detectable; it does not replace the detailed map.
+
+## Boundary that v1.0 left ambiguous
+
+`index.html` (now `demo/index.html`) carried an all-rights-reserved notice claiming exclusive
+rights over "the code, design, **methodology**, texts and graphics", while
+`AEIL_v1.0_licenses/LICENSE.md` states that "commercial use is intentionally permitted" and
+the licence map assigns `docs/*` to CC-BY-4.0. Both cannot be true of the methodology.
+
+v1.1.0 resolves it by separation rather than by choosing a winner: the **methodology is open**
+(CC-BY-4.0 / Apache-2.0) and the **demo is proprietary**. The demo's notice is scoped to the
+`demo/` folder and says so explicitly. If the maintainers intend the opposite - a proprietary
+methodology with an open-looking repository - that is a legitimate choice, but it must be made
+deliberately and the CC-BY-4.0 files withdrawn, because as published the repository grants
+rights it elsewhere disclaims.
