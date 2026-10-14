@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vdon61-wq.github.io/AEILv1.0/protocol/aeil-policy.schema.json",
+  "title": "AEIL v1.1 Behavioral Policy",
+  "description": "Machine-readable declaration of how emotional context may change an AI system's behavior (POLICY.md). Declared policy is audited against observed behavior; undeclared material adaptation is itself a finding (POLICY.md section 5).",
+  "type": "object",
+  "required": ["policy_id", "policy_version", "aeil_version", "scope", "rules", "global_prohibitions", "handoff_conditions", "review"],
+  "additionalProperties": false,
+  "properties": {
+    "policy_id": { "type": "string", "minLength": 1 },
+    "policy_version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "aeil_version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "scope": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "enum": ["model", "agent", "product", "deployment"] }
+    },
+    "description": { "type": "string" },
+
+    "action_vocabulary": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": ["code"],
+        "additionalProperties": false,
+        "properties": {
+          "code": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]*$" },
+          "meaning": { "type": "string" },
+          "standard": { "type": "boolean", "default": false, "description": "True if from POLICY.md section 2" }
+        }
+      },
+      "description": "Standard codes: ACK_PRIOR, TONE_SHIFT, OFFER_ACTION, HOLD, DEESCALATE, CLARIFY, HANDOFF, REFUSE, CONFIRM, WRITE_MEMORY, FORGET. Extensions must be declared here."
+    },
+
+    "confidence_thresholds": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "action_min": { "type": "number", "minimum": 0, "maximum": 1, "description": "Below this, consequential action is prohibited (BP-8, MEMORY.md SU-6)" },
+        "handoff_min": { "type": "number", "minimum": 0, "maximum": 1 },
+        "disclosure_min": { "type": "number", "minimum": 0, "maximum": 1, "description": "Below this, any mention of an inferred state must carry explicit uncertainty (TR-01)" }
+      }
+    },
+
+    "rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["rule_id", "when", "then", "severity_if_violated"],
+        "additionalProperties": false,
+        "properties": {
+          "rule_id": { "type": "string", "pattern": "^[A-Za-z0-9_.:-]+$" },
+          "implements": {
+            "type": "array",
+            "items": { "enum": ["BP-1", "BP-2", "BP-3", "BP-4", "BP-5", "BP-6", "BP-7", "BP-8", "BP-9", "BP-10"] },
+            "description": "Which mandatory floor rule(s) this implements (POLICY.md section 4)"
+          },
+          "priority": { "type": "integer", "minimum": 0, "description": "Higher wins on conflict. Safety-floor rules MUST have the highest priority in their scope." },
+          "when": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "signals": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["label"],
+                  "additionalProperties": false,
+                  "properties": {
+                    "label": { "type": "string" },
+                    "confidence_gte": { "type": "number", "minimum": 0, "maximum": 1 },
+                    "confidence_lte": { "type": "number", "minimum": 0, "maximum": 1 }
+                  }
+                }
+              },
+              "state": {
+                "type": "object",
+                "additionalProperties": true,
+                "properties": {
+                  "escalation_level": { "type": "integer" },
+                  "turn_index_gte": { "type": "integer" },
+                  "relationship_scope": { "enum": ["turn", "session", "relationship", "account"] }
+                }
+              },
+              "memory": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "has_unresolved": { "type": "boolean" },
+                  "same_topic": { "type": "boolean" },
+                  "subject_scope": { "enum": ["turn", "session", "relationship", "account"] },
+                  "superseded_present": { "type": "boolean" },
+                  "correction_present": { "type": "boolean" },
+                  "max_age": { "type": "string", "description": "ISO-8601 duration; events older than this must be re-validated (SU-5)" }
+                }
+              },
+              "context": {
+                "type": "object",
+                "additionalProperties": true,
+                "properties": {
+                  "domain": { "type": "string" },
+                  "high_impact": { "type": "boolean" },
+                  "intent_ambiguous": { "type": "boolean" },
+                  "minor_involved": { "type": "boolean" },
+                  "jurisdiction": { "type": "string" }
+                }
+              },
+              "authority": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "verified": { "type": "boolean" },
+                  "confirmation_required": { "type": "boolean" },
+                  "human_override_required": { "type": "boolean" }
+                }
+              }
+            }
+          },
+          "then": {
+            "type": "object",
+            "required": ["permitted", "required", "prohibited"],
+            "additionalProperties": false,
+            "properties": {
+              "permitted": { "type": "array", "items": { "type": "string" } },
+              "required": { "type": "array", "items": { "type": "string" } },
+              "prohibited": { "type": "array", "items": { "type": "string" } }
+            },
+            "description": "Action codes may be qualified, e.g. 'TONE_SHIFT:intimacy' to prohibit a specific tone variant."
+          },
+          "obligations": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "enum": ["explain", "log", "notify_human", "record_memory", "disclose_uncertainty", "offer_correction"] }
+          },
+          "severity_if_violated": { "enum": ["Critical", "High", "Medium", "Low"] },
+          "evidence_tests": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Benchmark test_ids exercising this rule. A rule with none is reported as 'unverified' (POLICY.md section 5)."
+          }
+        }
+      }
+    },
+
+    "global_prohibitions": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" },
+      "description": "Unconditional prohibitions. MUST include the SAFETY.md section 1 list and RESPONSIBLE_USE.md PU-1..PU-12 as applicable."
+    },
+    "handoff_conditions": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" },
+      "description": "Conditions under which HANDOFF is required (SAFETY.md section 4, BP-7)."
+    },
+
+    "memory_dependency": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "requires_memory_module": { "type": "boolean", "default": true },
+        "memory_provider": { "type": "string", "description": "MPI implementation, or 'builtin'" },
+        "mpi_conformance": {
+          "type": "array",
+          "items": { "enum": ["MPI-1", "MPI-2", "MPI-3", "MPI-4", "MPI-5"] }
+        }
+      }
+    },
+
+    "review": {
+      "type": "object",
+      "required": ["owner", "last_reviewed"],
+      "additionalProperties": false,
+      "properties": {
+        "owner": { "type": "string" },
+        "last_reviewed": { "type": "string", "format": "date" },
+        "next_review": { "type": "string", "format": "date" },
+        "change_log_ref": { "type": "string" },
+        "conflicts_disclosed": { "type": "boolean", "default": false, "description": "GOVERNANCE.md 'Conflicts of interest'" }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "description": "POLICY.md section 4: the mandatory floor BP-1..BP-10 must all be implemented by at least one rule.",
+      "$comment": "Enforced by tools/aeil_policy_check.py; JSON Schema alone cannot express 'each of 10 values appears at least once across the array'. Listed here for documentation."
+    }
+  ]
+}

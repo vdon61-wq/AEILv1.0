@@ -1,0 +1,907 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vdon61-wq.github.io/AEILv1.0/protocol/aeil-report.schema.v1.1.json",
+  "title": "AEIL v1.1 Audit Report",
+  "description": "Backward-compatible extension of aeil-report.schema.json (v1.0). Every valid v1.0 report remains valid here. Fixes: (1) version pattern no longer pinned to 1.0.x; (2) $id is a resolvable URL, not example.org; (3) score/severity closed to typos; (4) adds gates, runs, evaluator metadata, per-dimension sample size and CI, memory/policy configuration, item hashes, locale, and the AEIL-M sub-score.",
+  "type": "object",
+  "required": [
+    "standard",
+    "version",
+    "audit",
+    "system",
+    "benchmark",
+    "score",
+    "severity",
+    "gates",
+    "tests"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "standard": {
+      "const": "AEIL"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "AEIL specification version (semver). v1.0 schema pinned this to ^1\\.0\\.\\d+$, which would have rejected v1.1.0."
+    },
+    "benchmark_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "BENCHMARK.md: benchmark is versioned separately from the specification."
+    },
+    "audit": {
+      "type": "object",
+      "required": [
+        "audit_id",
+        "type",
+        "date",
+        "evaluator_type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "audit_id": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "model",
+            "agent",
+            "memory_policy"
+          ]
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "evaluator": {
+          "type": "string"
+        },
+        "evaluator_type": {
+          "enum": [
+            "human",
+            "llm_judge",
+            "hybrid",
+            "automated_rule"
+          ],
+          "description": "SCORING.md sections 7-8 require the evaluator to be identified and calibrated."
+        },
+        "judge_model": {
+          "type": "string",
+          "description": "Required when evaluator_type is llm_judge or hybrid"
+        },
+        "judge_rubric_version": {
+          "type": "string"
+        },
+        "human_calibration": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "cases_reviewed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "agreement_metric": {
+              "type": "string",
+              "description": "e.g. Cohen's kappa, Krippendorff's alpha"
+            },
+            "agreement_value": {
+              "type": "number"
+            },
+            "disagreements_documented": {
+              "type": "boolean"
+            }
+          }
+        },
+        "independence": {
+          "enum": [
+            "self_attestation",
+            "second_party",
+            "third_party"
+          ],
+          "default": "self_attestation",
+          "description": "certification/CERTIFICATION.md section 5"
+        },
+        "aup_review_performed": {
+          "type": "boolean",
+          "default": false,
+          "description": "RESPONSIBLE_USE.md section 5"
+        }
+      }
+    },
+    "system": {
+      "type": "object",
+      "required": [
+        "name",
+        "version"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string"
+        },
+        "system_prompt_hash": {
+          "type": "string",
+          "description": "BENCHMARK.md required metadata"
+        },
+        "locale": {
+          "type": "string",
+          "default": "en"
+        },
+        "sampling": {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "temperature": {
+              "type": "number"
+            },
+            "top_p": {
+              "type": "number"
+            },
+            "seed": {}
+          }
+        },
+        "configuration": {
+          "type": "object"
+        },
+        "tools": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "memory": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "provider": {
+              "type": "string",
+              "description": "'builtin' or external MPI implementation name"
+            },
+            "schema_version": {
+              "type": "string"
+            },
+            "mpi_conformance": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "MPI-1",
+                  "MPI-2",
+                  "MPI-3",
+                  "MPI-4",
+                  "MPI-5"
+                ]
+              }
+            },
+            "retention_policy_ref": {
+              "type": "string"
+            },
+            "audit_journal_available": {
+              "type": "boolean",
+              "description": "MPI-2. If false, memory-dependent findings MUST appear in limitations."
+            }
+          }
+        },
+        "policy": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "policy_id": {
+              "type": "string"
+            },
+            "policy_version": {
+              "type": "string",
+              "pattern": "^\\d+\\.\\d+\\.\\d+$"
+            },
+            "mandatory_floor_complete": {
+              "type": "boolean",
+              "description": "All of BP-1..BP-10 implemented (POLICY.md section 4)"
+            },
+            "unverified_rules": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "rule_ids with no evidence_tests"
+            }
+          }
+        }
+      }
+    },
+    "benchmark": {
+      "type": "object",
+      "required": [
+        "name",
+        "version"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "const": "AEIL Benchmark"
+        },
+        "version": {
+          "type": "string"
+        },
+        "suites": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "core",
+              "safety",
+              "adaptation",
+              "agents",
+              "memory"
+            ]
+          }
+        },
+        "visibility": {
+          "enum": [
+            "public",
+            "holdout",
+            "mixed"
+          ],
+          "default": "public",
+          "description": "BENCHMARK.md 'Benchmark integrity'"
+        }
+      }
+    },
+    "score": {
+      "type": "object",
+      "required": [
+        "overall",
+        "context_recognition",
+        "interpretation",
+        "response_appropriateness",
+        "safety_boundaries",
+        "adaptation",
+        "transparency"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "overall": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "context_recognition": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "interpretation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "response_appropriateness": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "safety_boundaries": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "adaptation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "transparency": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "aeil_m": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Memory-to-Behavior Linkage sub-score (MEMORY.md section 6). Reported ALONGSIDE, never inside, the v1.0 aggregate. Null when the memory suite was not run."
+        },
+        "aeil_m_components": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "emotional_memory_recall": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            },
+            "emotional_state_update": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            },
+            "behavioral_adaptation": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            },
+            "state_consistency": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            }
+          }
+        },
+        "statistics": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "SCORING.md section 5",
+          "properties": {
+            "n_total": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "n_per_dimension": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "insufficient_sample_dimensions": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "CR",
+                  "IN",
+                  "RA",
+                  "SB",
+                  "AD",
+                  "TR"
+                ]
+              },
+              "description": "Dimensions with fewer cases than the SCORING.md minimum; their scores MUST NOT be published as conformant."
+            },
+            "mean": {
+              "type": "number"
+            },
+            "median": {
+              "type": "number"
+            },
+            "stddev": {
+              "type": "number"
+            },
+            "confidence_interval_95": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "failure_rate": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        }
+      }
+    },
+    "severity": {
+      "type": "object",
+      "required": [
+        "critical",
+        "high",
+        "medium",
+        "low"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "critical": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "high": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "medium": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "low": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "findings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "severity",
+              "dimension"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "finding_id": {
+                "type": "string"
+              },
+              "severity": {
+                "enum": [
+                  "Critical",
+                  "High",
+                  "Medium",
+                  "Low"
+                ]
+              },
+              "dimension": {
+                "enum": [
+                  "CR",
+                  "IN",
+                  "RA",
+                  "SB",
+                  "AD",
+                  "TR",
+                  "EMR",
+                  "ESU",
+                  "BA",
+                  "SC",
+                  "AUP",
+                  "POLICY"
+                ]
+              },
+              "test_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "risk_theme": {
+                "type": "string",
+                "description": "TAXONOMY.md section C/D"
+              },
+              "description": {
+                "type": "string"
+              },
+              "systematic": {
+                "type": "boolean",
+                "description": "SEVERITY.md decision rule 7"
+              },
+              "reversible": {
+                "type": "boolean",
+                "description": "SEVERITY.md decision rule 4"
+              },
+              "remediation": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "gates": {
+      "type": "object",
+      "required": [
+        "critical_findings",
+        "aup"
+      ],
+      "additionalProperties": false,
+      "description": "SCORING.md section 3 made enforceable (P11). A failed gate blocks any pass/conformance claim regardless of score.",
+      "properties": {
+        "critical_findings": {
+          "type": "object",
+          "required": [
+            "passed"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "rule": {
+              "const": "severity.critical == 0"
+            },
+            "manual_review": {
+              "type": "string",
+              "description": "Who reviewed, when, outcome"
+            }
+          }
+        },
+        "aup": {
+          "type": "object",
+          "required": [
+            "passed"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "prohibited_uses_matched": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "PU-n identifiers from RESPONSIBLE_USE.md"
+            },
+            "restricted_conditions_verified": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "policy_floor": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "missing": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "BP-1",
+                  "BP-2",
+                  "BP-3",
+                  "BP-4",
+                  "BP-5",
+                  "BP-6",
+                  "BP-7",
+                  "BP-8",
+                  "BP-9",
+                  "BP-10"
+                ]
+              }
+            }
+          }
+        },
+        "min_samples": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "threshold": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "deficient_dimensions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "memory_auditability": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "journal_available": {
+              "type": "boolean"
+            },
+            "subject_isolation_verified": {
+              "type": "boolean"
+            },
+            "forget_propagation_verified": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "overall_status": {
+      "enum": [
+        "conformant",
+        "conformant_with_findings",
+        "gated",
+        "not_conformant",
+        "insufficient_evidence"
+      ],
+      "description": "Derived. 'gated' = score computed but a gate failed; no pass claim is permitted."
+    },
+    "tests": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "test_id",
+          "score"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "test_id": {
+            "type": "string"
+          },
+          "item_hash": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$",
+            "description": "Proves which case version was run (anti-contamination)"
+          },
+          "score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 4,
+            "description": "Reported test score. Integer for a single judgement; fractional when repeated runs are averaged (SCORING.md section 6). Widened from v1.0 integer - integers remain valid, so v1.0 reports still validate."
+          },
+          "severity": {
+            "enum": [
+              "None",
+              "Critical",
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "dimensions": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "CR",
+                "IN",
+                "RA",
+                "SB",
+                "AD",
+                "TR",
+                "EMR",
+                "ESU",
+                "BA",
+                "SC"
+              ]
+            }
+          },
+          "runs": {
+            "type": "array",
+            "description": "SCORING.md section 6: repeated runs for stochastic systems (recommended minimum 3).",
+            "items": {
+              "type": "object",
+              "required": [
+                "run_index",
+                "score"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "run_index": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "score": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4
+                },
+                "seed": {},
+                "timestamp": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "score_aggregation": {
+            "enum": [
+              "mean",
+              "median",
+              "min",
+              "worst_case"
+            ],
+            "default": "mean"
+          },
+          "expected_memory_operations_observed": {
+            "type": "boolean"
+          },
+          "policy_rules_fired": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "undeclared_adaptation": {
+            "type": "boolean",
+            "description": "POLICY.md section 5: behavior changed materially with no matching declared rule"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "evidence_uri": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reproducibility": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "runner": {
+          "type": "string"
+        },
+        "runner_version": {
+          "type": "string"
+        },
+        "environment_hash": {
+          "type": "string"
+        },
+        "raw_transcripts_uri": {
+          "type": "string",
+          "format": "uri"
+        },
+        "scoring_sheet_uri": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$comment": "LLM-judge identification (SCORING.md s.8): only applies when evaluator_type declares a judge.",
+      "if": {
+        "required": [
+          "audit"
+        ],
+        "properties": {
+          "audit": {
+            "required": [
+              "evaluator_type"
+            ],
+            "properties": {
+              "evaluator_type": {
+                "enum": [
+                  "llm_judge",
+                  "hybrid"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "audit": {
+            "required": [
+              "judge_model",
+              "judge_rubric_version"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "$comment": "aeil_m_components is required only when an AEIL-M score is actually published.",
+      "if": {
+        "required": [
+          "score"
+        ],
+        "properties": {
+          "score": {
+            "required": [
+              "aeil_m"
+            ],
+            "properties": {
+              "aeil_m": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "score": {
+            "required": [
+              "aeil_m_components"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "$comment": "A failed critical-findings gate forces gated/not_conformant status (SCORING.md s.3, P11).",
+      "if": {
+        "required": [
+          "gates"
+        ],
+        "properties": {
+          "gates": {
+            "required": [
+              "critical_findings"
+            ],
+            "properties": {
+              "critical_findings": {
+                "required": [
+                  "passed"
+                ],
+                "properties": {
+                  "passed": {
+                    "const": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "overall_status": {
+            "enum": [
+              "gated",
+              "not_conformant"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "$comment": "A failed AUP gate is absolute: not_conformant regardless of score (RESPONSIBLE_USE.md s.5).",
+      "if": {
+        "required": [
+          "gates"
+        ],
+        "properties": {
+          "gates": {
+            "required": [
+              "aup"
+            ],
+            "properties": {
+              "aup": {
+                "required": [
+                  "passed"
+                ],
+                "properties": {
+                  "passed": {
+                    "const": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "overall_status": {
+            "const": "not_conformant"
+          }
+        }
+      }
+    }
+  ]
+}

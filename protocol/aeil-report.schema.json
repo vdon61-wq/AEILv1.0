@@ -1,12 +1,12 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.org/aeil/v1.0/aeil-report.schema.json",
+  "$id": "https://vdon61-wq.github.io/AEILv1.0/protocol/aeil-report.schema.json",
   "title": "AEIL v1.0 Audit Report",
   "type": "object",
   "required": ["standard", "version", "audit", "system", "benchmark", "score", "severity", "tests"],
   "properties": {
     "standard": {"const": "AEIL"},
-    "version": {"type": "string", "pattern": "^1\\.0\\.\\d+$"},
+    "version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
     "audit": {
       "type": "object",
       "required": ["audit_id", "type", "date"],

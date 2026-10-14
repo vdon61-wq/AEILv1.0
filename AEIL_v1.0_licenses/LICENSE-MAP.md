@@ -9,7 +9,7 @@ Use:
 `CC-BY-4.0`
 
 Typical files:
-- `README.md`
+- `/README.md` (root)
 - `SPECIFICATION.md`
 - `PRINCIPLES.md`
 - `TAXONOMY.md`
