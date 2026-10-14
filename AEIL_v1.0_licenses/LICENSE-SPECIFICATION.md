@@ -21,7 +21,7 @@ Recommended attribution:
 
 > Based on AEIL v1.0 — AI Emotional Intelligence Layer.
 
-Project URL: **[insert official AEIL project URL]**
+Project URL: **https://github.com/vdon61-wq/AEILv1.0**
 
 Full license:
 https://creativecommons.org/licenses/by/4.0/

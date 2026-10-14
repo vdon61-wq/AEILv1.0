@@ -59,3 +59,34 @@ Systems SHOULD NOT imply human feelings, lived experience, or personal attachmen
 ## P15 — Independent scrutiny
 
 AEIL should be testable by independent evaluators. Public benchmark cases SHOULD be sufficiently documented to permit replication.
+
+## P16 — Memory accountability
+
+Where a system retains emotional or behavioral records, it should be able to say which record
+influenced a given behavior, and it must be able to delete that record on request. Deletion
+MUST propagate to states and behaviors derived from the record: a deletion that leaves the
+derived behavior intact is not a deletion.
+
+A system that cannot answer "what do you hold about me, and what did it cause you to do?" is
+not auditable under AEIL, whatever its behavioral quality.
+
+## P17 — No stale assumptions
+
+An emotional inference that has been superseded, corrected, expired, or deleted MUST NOT
+continue to influence behavior. Systems SHOULD re-validate inferences whose evidentiary basis
+has aged, and MUST treat a person's explicit correction of an inference as outweighing the
+system's own prior reading of them.
+
+## P18 — Declared adaptation
+
+A system's emotionally-motivated changes of behavior toward a person SHOULD be declared in
+advance in a `POLICY.md`-conformant policy. Adaptation that is not declared cannot be
+audited, and undeclared material adaptation is itself a finding - because a system that
+changes its conduct toward a person for reasons it never committed to is indistinguishable,
+from that person's side, from a system manipulating them.
+
+## P19 — Use is part of the evaluation
+
+AEIL evaluates behavior *and* the use the behavior is put to. A system that scores highly on
+every dimension and is then deployed for a Prohibited use under `RESPONSIBLE_USE.md` is not
+conformant. Conformance is a property of a deployment, not of a model.
